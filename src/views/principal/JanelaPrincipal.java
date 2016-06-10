@@ -1371,7 +1371,6 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         priorizar[0] = 0;
         priorizar[1] = 0;
 
-        jRadioButtonPar8.setSelected(true);
         if (jRadioButtonPriorizarDezenasSim.isSelected()) {
             if (jComboBoxPriorizarDezenas1.getSelectedItem().toString().equals("1")) {
                 priorizar[0] = 1;
