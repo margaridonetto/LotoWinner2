@@ -14,7 +14,7 @@ public class SortePorNumeros {
         cartelaPronta[0] = numerosSelecionados.get(0);
         cartelaPronta[1] = numerosSelecionados.get(1);
         cartelaPronta[2] = numerosSelecionados.get(2);
-        cartelaPronta[3] = numerosSelecionados.get(3);
+        cartelaPronta[3] = numerosSelecionados.get(3); 
         cartelaPronta[4] = numerosSelecionados.get(5);
         cartelaPronta[5] = numerosSelecionados.get(6);
         cartelaPronta[6] = numerosSelecionados.get(7);

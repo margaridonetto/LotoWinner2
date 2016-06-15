@@ -46,8 +46,8 @@ public class CincoPorCincoTest {
         int[] fixas = null;
         CincoPorCinco instance = new CincoPorCinco();
         int[] expResult = null;
-        int[] result = instance.montarFAB(fixas);
-        assertArrayEquals(expResult, result);
+       // int[] result = instance.montarFAB(fixas);
+     //   assertArrayEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
@@ -61,8 +61,8 @@ public class CincoPorCincoTest {
         int[] fixas = null;
         CincoPorCinco instance = new CincoPorCinco();
         int[] expResult = null;
-        int[] result = instance.montarFAC(fixas);
-        assertArrayEquals(expResult, result);
+      //  int[] result = instance.montarFAC(fixas);
+    //    assertArrayEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
@@ -76,8 +76,8 @@ public class CincoPorCincoTest {
         int[] fixas = null;
         CincoPorCinco instance = new CincoPorCinco();
         int[] expResult = null;
-        int[] result = instance.montarFAD(fixas);
-        assertArrayEquals(expResult, result);
+      //  int[] result = instance.montarFAD(fixas);
+      //  assertArrayEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
@@ -91,8 +91,8 @@ public class CincoPorCincoTest {
         int[] fixas = null;
         CincoPorCinco instance = new CincoPorCinco();
         int[] expResult = null;
-        int[] result = instance.montarFBC(fixas);
-        assertArrayEquals(expResult, result);
+       // int[] result = instance.montarFBC(fixas);
+     //   assertArrayEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
@@ -106,8 +106,8 @@ public class CincoPorCincoTest {
         int[] fixas = null;
         CincoPorCinco instance = new CincoPorCinco();
         int[] expResult = null;
-        int[] result = instance.montarFBD(fixas);
-        assertArrayEquals(expResult, result);
+      //  int[] result = instance.montarFBD(fixas);
+      //  assertArrayEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
@@ -121,8 +121,8 @@ public class CincoPorCincoTest {
         int[] fixas = null;
         CincoPorCinco instance = new CincoPorCinco();
         int[] expResult = null;
-        int[] result = instance.montarFCD(fixas);
-        assertArrayEquals(expResult, result);
+      //  int[] result = instance.montarFCD(fixas);
+     //   assertArrayEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }

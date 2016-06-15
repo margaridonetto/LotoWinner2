@@ -118,6 +118,7 @@ public class ParesImpares {
                 arrayAtualizado.add(array.get(cont));
             }
         }
+        
         return arrayAtualizado;
     }
 

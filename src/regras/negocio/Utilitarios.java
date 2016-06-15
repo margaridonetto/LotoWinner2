@@ -9,7 +9,7 @@ public class Utilitarios {
     
 
     public static void zerarVet(int vetor[]) { //BOM
-        for (int cont = 0; cont < 15; cont++) {
+        for (int cont = 0; cont < vetor.length; cont++) {
             vetor[cont] = 0;
         }
     }
@@ -22,7 +22,7 @@ public class Utilitarios {
         }
         return quant;
     }
-
+    //Duplicado fala com margarido como remover !!
     public static void ordenar(int vetor[]) { //BOM
 
         ArrayList<Integer> jogo = new ArrayList<Integer>();
@@ -41,6 +41,13 @@ public class Utilitarios {
             if(combinacao[numeros] == num)
                 repetido = true;
         }
+        return repetido;    
+    }
+    
+    public static boolean verificarRepetidoArray(int num, ArrayList combinacao){ //BOM
+        boolean repetido = false;
+        if(combinacao.equals(num))
+            repetido = true;
         return repetido;    
     }
     

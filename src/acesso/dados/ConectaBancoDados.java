@@ -6,7 +6,7 @@ import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 public class ConectaBancoDados {
-    //Teste Conectando NEtbs PC  Fixo
+    
     public Statement stm; // responsável por preparar e realizar pesquisa no banco de dados
     public ResultSet rs; // responsável por armazenar o resultado de uma pesquisa passada para o Statement
     public Connection con; // responsável por realizar a conexão com o banco de dados
