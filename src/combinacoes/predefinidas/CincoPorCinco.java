@@ -3,7 +3,7 @@ package combinacoes.predefinidas;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import preferencias.ParesImpares;
-import regras.negocio.Utilitarios;
+import helper.Utilitarios;
 
 public class CincoPorCinco {
 

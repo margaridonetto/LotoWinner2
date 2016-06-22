@@ -11,7 +11,7 @@ import views.combinacoespredefinidas.TelaCincoPorCinco;
 import acesso.dados.ConectaBancoDados;
 import java.awt.Color;
 import javax.swing.JOptionPane;
-import regras.negocio.Utilitarios;
+import helper.Utilitarios;
 import preferencias.GerarCombinacaoDuasPreferencias;
 import preferencias.ParesImpares;
 import preferencias.Somatoria;

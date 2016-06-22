@@ -1,7 +1,7 @@
 package combinacoes.predefinidas.testes;
 
 import java.util.ArrayList;
-import regras.negocio.Utilitarios;
+import helper.Utilitarios;
 
 public class testeSortePorNumeros {
      public testeSortePorNumeros() {

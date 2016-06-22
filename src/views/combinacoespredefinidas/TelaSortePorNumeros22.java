@@ -4,7 +4,7 @@ import combinacoes.predefinidas.SortePorNumeros;
 import java.awt.Color;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
-import regras.negocio.Utilitarios;
+import helper.Utilitarios;
 import views.cadastro.user.TelaCadUsuario;
 import views.cadastro.user.TelaLogin;
 

@@ -1523,10 +1523,7 @@ public class TelaCincoPorCinco extends javax.swing.JFrame {
             fixasInt = cpc.converterArrayEmInt(fixas);
             cpc.preencherTodosNumeros();
             cpc.preencherABCD(fixasInt);
-           
-            for(int cont = 0; cont < fixasInt.length; cont++){
-                JOptionPane.showMessageDialog(null, " " + fixasInt[cont]);
-            }
+          
             jTextFieldFab.setText("" + cpc.montarFAB(fixasInt));
             jTextFieldFac.setText("" + cpc.montarFAC(fixasInt));
             jTextFieldFad.setText("" + cpc.montarFAD(fixasInt));

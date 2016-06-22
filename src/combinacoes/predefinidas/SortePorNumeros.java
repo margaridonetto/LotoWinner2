@@ -1,7 +1,7 @@
 package combinacoes.predefinidas;
 
 import java.util.ArrayList;
-import regras.negocio.Utilitarios;
+import helper.Utilitarios;
 
 public class SortePorNumeros {
      public SortePorNumeros() {

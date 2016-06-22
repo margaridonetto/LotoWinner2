@@ -1,7 +1,7 @@
 package preferencias;
 
 import java.util.ArrayList;
-import regras.negocio.Utilitarios;
+import helper.Utilitarios;
 
 public class GerarCombinacaoDuasPreferencias {
 
