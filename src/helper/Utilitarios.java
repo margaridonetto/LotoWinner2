@@ -14,6 +14,14 @@ public class Utilitarios {
         }
     }
     
+    public static String convertIntToString(int[] vet){
+        String vetorString = "";
+        for(int cont = 0; cont < vet.length; cont++){
+            vetorString += " " + vet[cont];
+        }
+        return vetorString;
+    }
+    
     public static int verificarQuantNumeros(int[] combinacao){ //BOM
         int quant = 0;
         for(int numeros = 0; numeros < combinacao.length; numeros++){

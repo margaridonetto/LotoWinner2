@@ -6,6 +6,7 @@
 package views.combinacoespredefinidas;
 
 import combinacoes.predefinidas.CincoPorCinco;
+import helper.Utilitarios;
 import java.awt.Color;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
@@ -87,6 +88,16 @@ public class TelaCincoPorCinco extends javax.swing.JFrame {
         jTextFieldFbd = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
         jTextFieldFcd = new javax.swing.JTextField();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jTextFieldA = new javax.swing.JTextField();
+        jTextFieldB = new javax.swing.JTextField();
+        jTextFieldD = new javax.swing.JTextField();
+        jTextFieldC = new javax.swing.JTextField();
+        jTextFieldFixas = new javax.swing.JTextField();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem7 = new javax.swing.JMenuItem();
@@ -131,6 +142,7 @@ public class TelaCincoPorCinco extends javax.swing.JFrame {
 
         jTextFieldQuantNum.setEditable(false);
         jTextFieldQuantNum.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jTextFieldQuantNum.setText("0");
         jTextFieldQuantNum.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldQuantNumActionPerformed(evt);
@@ -397,7 +409,7 @@ public class TelaCincoPorCinco extends javax.swing.JFrame {
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel2)
                                     .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 335, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(0, 261, Short.MAX_VALUE))))
+                                .addGap(0, 0, Short.MAX_VALUE))))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(200, 200, 200)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -457,7 +469,7 @@ public class TelaCincoPorCinco extends javax.swing.JFrame {
                                 .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(0, 220, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(167, 167, 167)
@@ -521,7 +533,7 @@ public class TelaCincoPorCinco extends javax.swing.JFrame {
                     .addComponent(jTextField25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(43, 43, 43)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(110, Short.MAX_VALUE))
         );
 
         jTextFieldFab.setEditable(false);
@@ -554,6 +566,41 @@ public class TelaCincoPorCinco extends javax.swing.JFrame {
 
         jTextFieldFcd.setEditable(false);
 
+        jLabel14.setText("A:");
+
+        jLabel15.setText("B:");
+
+        jLabel16.setText("C:");
+
+        jLabel17.setText("D:");
+
+        jLabel18.setText("FIXAS:");
+
+        jTextFieldA.setEditable(false);
+
+        jTextFieldB.setEditable(false);
+        jTextFieldB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldBActionPerformed(evt);
+            }
+        });
+
+        jTextFieldD.setEditable(false);
+        jTextFieldD.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldDActionPerformed(evt);
+            }
+        });
+
+        jTextFieldC.setEditable(false);
+        jTextFieldC.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldCActionPerformed(evt);
+            }
+        });
+
+        jTextFieldFixas.setEditable(false);
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -561,20 +608,42 @@ public class TelaCincoPorCinco extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel11, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel12, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextFieldFbd, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextFieldFbc, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextFieldFad, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextFieldFac, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextFieldFab, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextFieldFcd, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel11, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel12, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jTextFieldFbd, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jTextFieldFbc, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jTextFieldFad, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jTextFieldFac, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jTextFieldFab, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jTextFieldFcd, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.LEADING))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel14)
+                            .addComponent(jLabel15)
+                            .addComponent(jLabel18))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jTextFieldA, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+                            .addComponent(jTextFieldFixas, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTextFieldB)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(23, 23, 23)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel17)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jTextFieldD))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel16)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jTextFieldC, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap(27, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -583,7 +652,27 @@ public class TelaCincoPorCinco extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(255, 255, 255)
+                .addGap(32, 32, 32)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel18)
+                    .addComponent(jTextFieldFixas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel14)
+                    .addComponent(jTextFieldA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel15)
+                    .addComponent(jTextFieldB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel16)
+                    .addComponent(jTextFieldC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel17)
+                    .addComponent(jTextFieldD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(73, 73, 73)
                 .addComponent(jLabel7)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTextFieldFab, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -607,7 +696,7 @@ public class TelaCincoPorCinco extends javax.swing.JFrame {
                 .addComponent(jLabel12)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTextFieldFcd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(59, Short.MAX_VALUE))
+                .addContainerGap(62, Short.MAX_VALUE))
         );
 
         jMenuBar1.setToolTipText("");
@@ -717,7 +806,7 @@ public class TelaCincoPorCinco extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 33, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1530,7 +1619,17 @@ public class TelaCincoPorCinco extends javax.swing.JFrame {
             jTextFieldFbc.setText("" + cpc.montarFBC(fixasInt));
             jTextFieldFbd.setText("" + cpc.montarFBD(fixasInt));
             jTextFieldFcd.setText("" + cpc.montarFCD(fixasInt));
-
+            
+            cpc.setA(Utilitarios.ordenarCartela(cpc.getA()));
+            cpc.setB(Utilitarios.ordenarCartela(cpc.getB()));
+            cpc.setC(Utilitarios.ordenarCartela(cpc.getC()));
+            cpc.setD(Utilitarios.ordenarCartela(cpc.getD()));
+            
+            jTextFieldFixas.setText("" + Utilitarios.adicionarZero(fixasInt));
+            jTextFieldA.setText("" + Utilitarios.adicionarZero(cpc.getA()));
+            jTextFieldB.setText("" + Utilitarios.adicionarZero(cpc.getB()));
+            jTextFieldC.setText("" + Utilitarios.adicionarZero(cpc.getC()));
+            jTextFieldD.setText("" + Utilitarios.adicionarZero(cpc.getD()));
         }else{
             if((20-quantidade) == 1){
                 JOptionPane.showMessageDialog(null, "Você deve escolher mais " + (5 - quantidade) + " número!");
@@ -1540,6 +1639,18 @@ public class TelaCincoPorCinco extends javax.swing.JFrame {
 
         }
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jTextFieldBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldBActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldBActionPerformed
+
+    private void jTextFieldDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldDActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldDActionPerformed
+
+    private void jTextFieldCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldCActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldCActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1585,6 +1696,11 @@ public class TelaCincoPorCinco extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -1639,12 +1755,17 @@ public class TelaCincoPorCinco extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField24;
     private javax.swing.JTextField jTextField25;
     private javax.swing.JTextField jTextField7;
+    private javax.swing.JTextField jTextFieldA;
+    private javax.swing.JTextField jTextFieldB;
+    private javax.swing.JTextField jTextFieldC;
+    private javax.swing.JTextField jTextFieldD;
     private javax.swing.JTextField jTextFieldFab;
     private javax.swing.JTextField jTextFieldFac;
     private javax.swing.JTextField jTextFieldFad;
     private javax.swing.JTextField jTextFieldFbc;
     private javax.swing.JTextField jTextFieldFbd;
     private javax.swing.JTextField jTextFieldFcd;
+    private javax.swing.JTextField jTextFieldFixas;
     private javax.swing.JTextField jTextFieldQuantNum;
     // End of variables declaration//GEN-END:variables
 }

@@ -188,6 +188,7 @@ public class TelaSortePorNumeros22 extends javax.swing.JFrame {
 
         jTextFieldQuantNum.setEditable(false);
         jTextFieldQuantNum.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jTextFieldQuantNum.setText("0");
 
         jTextField03.setEditable(false);
         jTextField03.setText("03");
