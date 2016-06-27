@@ -391,6 +391,11 @@ public class JanelaPrincipal extends javax.swing.JFrame {
 
         buttonGroupQuantRepetidos.add(jRadioButtonQuantRepetidos8);
         jRadioButtonQuantRepetidos8.setText("8");
+        jRadioButtonQuantRepetidos8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButtonQuantRepetidos8ActionPerformed(evt);
+            }
+        });
 
         buttonGroupQuantRepetidos.add(jRadioButtonQuantRepetidos9);
         jRadioButtonQuantRepetidos9.setSelected(true);
@@ -672,9 +677,19 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         buttonGroupSovaIntervalos.add(jRadioButtonSomaIntervalo2);
         jRadioButtonSomaIntervalo2.setSelected(true);
         jRadioButtonSomaIntervalo2.setText("184 ~ 199");
+        jRadioButtonSomaIntervalo2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButtonSomaIntervalo2ActionPerformed(evt);
+            }
+        });
 
         buttonGroupSovaIntervalos.add(jRadioButtonSomaIntervalo4);
         jRadioButtonSomaIntervalo4.setText("216 ~ 231");
+        jRadioButtonSomaIntervalo4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButtonSomaIntervalo4ActionPerformed(evt);
+            }
+        });
 
         buttonGroupSovaIntervalos.add(jRadioButtonSomaIntervalo3);
         jRadioButtonSomaIntervalo3.setText("200 ~ 215");
@@ -1414,11 +1429,11 @@ public class JanelaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jRadioButtonPriorizarDezenasSimActionPerformed
 
     private void jRadioButtonSomaIntervalo3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonSomaIntervalo3ActionPerformed
-        // TODO add your handling code here:
+        jTextFieldConfiancaCombinacao.setText(String.format("%.2f", this.calcularConfianca()));
     }//GEN-LAST:event_jRadioButtonSomaIntervalo3ActionPerformed
 
     private void jRadioButtonSomaIntervalo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonSomaIntervalo1ActionPerformed
-        // TODO add your handling code here:
+        jTextFieldConfiancaCombinacao.setText(String.format("%.2f", this.calcularConfianca()));
     }//GEN-LAST:event_jRadioButtonSomaIntervalo1ActionPerformed
 
     private void jRadioButtonSomatoriaNaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonSomatoriaNaoActionPerformed
@@ -1442,11 +1457,11 @@ public class JanelaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextFieldConfiancaCombinacaoActionPerformed
 
     private void jRadioButtonQuantRepetidos10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonQuantRepetidos10ActionPerformed
-        // TODO add your handling code here:
+        jTextFieldConfiancaCombinacao.setText(String.format("%.2f", this.calcularConfianca()));
     }//GEN-LAST:event_jRadioButtonQuantRepetidos10ActionPerformed
 
     private void jRadioButtonQuantRepetidos9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonQuantRepetidos9ActionPerformed
-        // TODO add your handling code here:
+        jTextFieldConfiancaCombinacao.setText(String.format("%.2f", this.calcularConfianca()));
     }//GEN-LAST:event_jRadioButtonQuantRepetidos9ActionPerformed
 
     private void jRadioButtonRepetidosNaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonRepetidosNaoActionPerformed
@@ -2046,6 +2061,18 @@ public class JanelaPrincipal extends javax.swing.JFrame {
     private void jTextFieldSomatoriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldSomatoriaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldSomatoriaActionPerformed
+
+    private void jRadioButtonSomaIntervalo2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonSomaIntervalo2ActionPerformed
+        jTextFieldConfiancaCombinacao.setText(String.format("%.2f", this.calcularConfianca()));
+    }//GEN-LAST:event_jRadioButtonSomaIntervalo2ActionPerformed
+
+    private void jRadioButtonSomaIntervalo4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonSomaIntervalo4ActionPerformed
+        jTextFieldConfiancaCombinacao.setText(String.format("%.2f", this.calcularConfianca()));
+    }//GEN-LAST:event_jRadioButtonSomaIntervalo4ActionPerformed
+
+    private void jRadioButtonQuantRepetidos8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonQuantRepetidos8ActionPerformed
+        jTextFieldConfiancaCombinacao.setText(String.format("%.2f", this.calcularConfianca()));
+    }//GEN-LAST:event_jRadioButtonQuantRepetidos8ActionPerformed
 
     /**
      * @param args the command line arguments
