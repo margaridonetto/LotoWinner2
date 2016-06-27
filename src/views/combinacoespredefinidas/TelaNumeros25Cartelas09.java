@@ -7,18 +7,18 @@ package views.combinacoespredefinidas;
 
 import views.cadastro.user.TelaCadUsuario;
 import views.cadastro.user.TelaLogin;
-import views.combinacoespredefinidas.TelaCincoPorCinco;
+import views.combinacoespredefinidas.TelaNumeros25Cartelas06;
 
 /**
  *
  * @author Gamer
  */
-public class TelaDivisaoPorGrupos02 extends javax.swing.JFrame {
+public class TelaNumeros25Cartelas09 extends javax.swing.JFrame {
 
     /**
      * Creates new form TelaDivisaoPorGrupos02
      */
-    public TelaDivisaoPorGrupos02() {
+    public TelaNumeros25Cartelas09() {
         initComponents();
     }
 
@@ -73,7 +73,7 @@ public class TelaDivisaoPorGrupos02 extends javax.swing.JFrame {
         jMenuItem6 = new javax.swing.JMenuItem();
         jMenu7 = new javax.swing.JMenu();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel2.setText("Combinação com 25 Números");
@@ -421,7 +421,7 @@ public class TelaDivisaoPorGrupos02 extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
-        TelaCincoPorCinco telaGerarCombinacoes = new TelaCincoPorCinco();
+        TelaNumeros25Cartelas06 telaGerarCombinacoes = new TelaNumeros25Cartelas06();
         telaGerarCombinacoes.setVisible(true);
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
@@ -518,20 +518,21 @@ public class TelaDivisaoPorGrupos02 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TelaDivisaoPorGrupos02.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaNumeros25Cartelas09.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TelaDivisaoPorGrupos02.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaNumeros25Cartelas09.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TelaDivisaoPorGrupos02.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaNumeros25Cartelas09.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TelaDivisaoPorGrupos02.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaNumeros25Cartelas09.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TelaDivisaoPorGrupos02().setVisible(true);
+                new TelaNumeros25Cartelas09().setVisible(true);
             }
         });
     }

@@ -5,7 +5,7 @@
  */
 package views.combinacoespredefinidas;
 
-import combinacoes.predefinidas.CincoPorCinco;
+import combinacoes.predefinidas.Numeros25Cartelas06;
 import helper.Utilitarios;
 import java.awt.Color;
 import java.util.ArrayList;
@@ -19,13 +19,13 @@ import views.cadastro.user.TelaLogin;
  *
  * @author Gamer
  */
-public class TelaCincoPorCinco extends javax.swing.JFrame {
+public class TelaNumeros25Cartelas06 extends javax.swing.JFrame {
 
     private int quantidade;
     private ArrayList fixas = new ArrayList();
     private int[] fixasInt = new int[5];
-    CincoPorCinco cpc = new CincoPorCinco();
-    public TelaCincoPorCinco() {
+    Numeros25Cartelas06 cpc = new Numeros25Cartelas06();
+    public TelaNumeros25Cartelas06() {
         initComponents();
     }
 
@@ -117,7 +117,7 @@ public class TelaCincoPorCinco extends javax.swing.JFrame {
         jMenuItem5 = new javax.swing.JMenuItem();
         jMenuItem6 = new javax.swing.JMenuItem();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("LotoWinner - Combinações");
         setResizable(false);
 
@@ -812,7 +812,7 @@ public class TelaCincoPorCinco extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 10, Short.MAX_VALUE))
         );
 
         pack();
@@ -1669,21 +1669,23 @@ public class TelaCincoPorCinco extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TelaCincoPorCinco.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaNumeros25Cartelas06.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TelaCincoPorCinco.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaNumeros25Cartelas06.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TelaCincoPorCinco.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaNumeros25Cartelas06.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TelaCincoPorCinco.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaNumeros25Cartelas06.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TelaCincoPorCinco().setVisible(true);
+                new TelaNumeros25Cartelas06().setVisible(true);
             }
         });
     }

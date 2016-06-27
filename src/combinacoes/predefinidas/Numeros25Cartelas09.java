@@ -9,6 +9,6 @@ package combinacoes.predefinidas;
  *
  * @author Gamer
  */
-public class DivisaoPorGrupos02 {
+public class Numeros25Cartelas09 {
     
 }

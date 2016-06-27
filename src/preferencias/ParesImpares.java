@@ -100,6 +100,38 @@ public class ParesImpares {
         return num;
     }
     
+    public static boolean verificarRepetidoPar(int[] sorteioAnterior, int num){
+        boolean repetidoPar = false;
+        if(num % 2 == 0){
+            repetidoPar = ParesImpares.verificarRepetido(num, sorteioAnterior);
+        }
+        return repetidoPar;
+    }
+    
+    public static boolean verificarRepetidoImpar(int[] sorteioAnterior, int num){
+        boolean repetidoImpar = false;
+        if(num % 2 != 0){
+            repetidoImpar = ParesImpares.verificarRepetido(num, sorteioAnterior);
+        }
+        return repetidoImpar;
+    }
+    
+    public static boolean verificarNaoRepetidoPar(int[] sorteioAnterior, int num){
+        boolean naoRepetidoPar = false;
+        if(num % 2 == 0){
+            naoRepetidoPar = ParesImpares.verificarRepetido(num, sorteioAnterior);
+        }
+        return naoRepetidoPar;
+    }
+    
+    public static boolean verificarNaoRepetidoImpar(int[] sorteioAnterior, int num){
+        boolean naoRepetidoImpar = false;
+        if(num % 2 == 0){
+            naoRepetidoImpar = ParesImpares.verificarRepetido(num, sorteioAnterior);
+        }
+        return naoRepetidoImpar;
+    }
+    
     public static boolean verificarRepetido(int num, int[] combinacao) {
         boolean repetido = false;
         for (int numeros = 0; numeros < combinacao.length; numeros++) {

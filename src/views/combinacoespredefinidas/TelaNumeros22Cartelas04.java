@@ -1,6 +1,6 @@
 package views.combinacoespredefinidas;
 
-import combinacoes.predefinidas.SortePorNumeros;
+import combinacoes.predefinidas.Numeros22Cartelas04;
 import java.awt.Color;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
@@ -8,12 +8,12 @@ import helper.Utilitarios;
 import views.cadastro.user.TelaCadUsuario;
 import views.cadastro.user.TelaLogin;
 
-public class TelaSortePorNumeros22 extends javax.swing.JFrame {
+public class TelaNumeros22Cartelas04 extends javax.swing.JFrame {
 
     private int quantidade = 0;
     private ArrayList<Integer> numerosSelecionados = new ArrayList<Integer>();
     
-    public TelaSortePorNumeros22() {
+    public TelaNumeros22Cartelas04() {
         this.numerosSelecionados = new ArrayList<Integer>();
         initComponents();
     }
@@ -79,7 +79,7 @@ public class TelaSortePorNumeros22 extends javax.swing.JFrame {
         jMenuItem6 = new javax.swing.JMenuItem();
         jMenu7 = new javax.swing.JMenu();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("  Sorte Por Números 22");
         setResizable(false);
 
@@ -686,7 +686,7 @@ public class TelaSortePorNumeros22 extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
-        TelaCincoPorCinco telaGerarCombinacoes = new TelaCincoPorCinco();
+        TelaNumeros25Cartelas06 telaGerarCombinacoes = new TelaNumeros25Cartelas06();
         telaGerarCombinacoes.setVisible(true);
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
@@ -1494,7 +1494,7 @@ public class TelaSortePorNumeros22 extends javax.swing.JFrame {
                 numerosSelecionados.add(25);
             }
             
-            SortePorNumeros sorte = new SortePorNumeros();
+            Numeros22Cartelas04 sorte = new Numeros22Cartelas04();
             int combinacaos[] = new int[15];
             
             combinacaos = sorte.gera01Cartela22Numeros(numerosSelecionados);
@@ -1554,14 +1554,30 @@ public class TelaSortePorNumeros22 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TelaSortePorNumeros22.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaNumeros22Cartelas04.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TelaSortePorNumeros22.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaNumeros22Cartelas04.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TelaSortePorNumeros22.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaNumeros22Cartelas04.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TelaSortePorNumeros22.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaNumeros22Cartelas04.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -1582,7 +1598,7 @@ public class TelaSortePorNumeros22 extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TelaSortePorNumeros22().setVisible(true);
+                new TelaNumeros22Cartelas04().setVisible(true);
             }
         });
     }

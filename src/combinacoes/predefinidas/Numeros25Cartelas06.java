@@ -5,7 +5,7 @@ import javax.swing.JOptionPane;
 import preferencias.ParesImpares;
 import helper.Utilitarios;
 
-public class CincoPorCinco {
+public class Numeros25Cartelas06 {
 
     private int[] a = new int[5];
     private int[] b = new int[5];
@@ -46,7 +46,7 @@ public class CincoPorCinco {
     private int[] todosNumerosInt = new int[25];
     private ArrayList<Integer> todosNumerosArray = new ArrayList<Integer>();
 
-    public CincoPorCinco() {
+    public Numeros25Cartelas06() {
     }
 
     public String montarFAB(int[] fixas) {
@@ -177,7 +177,7 @@ public class CincoPorCinco {
 
     public void preencherABCD(int[] fixas) {
         int num;
-        CincoPorCinco cpc = new CincoPorCinco();
+        Numeros25Cartelas06 cpc = new Numeros25Cartelas06();
         int quantidade;
         int[] combinacaoInt;
         todosNumerosArray.addAll(cpc.converterIntEmArray(todosNumerosInt));
@@ -245,7 +245,7 @@ public class CincoPorCinco {
             System.out.println("Quantidade" + quantidade);
         }
         
-    }
+    } //aki
 
     public void preencherTodosNumeros() {
         for (int cont = 0; cont < 25; cont++) {

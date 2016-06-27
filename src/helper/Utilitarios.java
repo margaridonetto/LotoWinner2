@@ -52,6 +52,20 @@ public class Utilitarios {
         return repetido;    
     }
     
+    public static int verificarQuantidadeRepetidosDoisVetores(int vet1[], int vet2[]){
+        int repetidos = 0;
+        boolean contem = false;
+        for(int cont = 0; cont < vet1.length; cont++){
+            contem = false;
+            contem = Utilitarios.verificarRepetido(vet1[cont], vet2);
+            if(contem){
+                repetidos++;
+            }
+        }
+
+        return repetidos;
+    }
+    
     public static boolean verificarRepetidoArray(int num, ArrayList combinacao){ //BOM
         boolean repetido = false;
         if(combinacao.equals(num))
@@ -170,6 +184,86 @@ public class Utilitarios {
             result[number] = numbers.get(number);
         }
         return result;
+    }
+    
+    public static int maiorNumero(ArrayList<Integer> vetor){
+        int num = 0;
+        for(int cont = 0; cont < vetor.size(); cont++){
+            if(vetor.get(cont) > num){
+                num = vetor.get(cont);
+            }
+        }
+        return num;
+    }
+    
+    public static int menorNumero(ArrayList<Integer> vetor){
+        int num = 0;
+        for(int cont = 0; cont < vetor.size(); cont++){
+            if(num == 0){
+                num = vetor.get(cont);
+            }
+            if(vetor.get(cont) < num){
+                num = vetor.get(cont);
+            }
+        }
+        return num;
+    }
+    
+    public static String quantLinhas(int combinacao[]){
+        String quantidadeLinhas = new String();
+        int lin1 = 0, lin2 = 0, lin3 = 0, lin4 = 0, lin5 = 0;
+        for(int cont = 0; cont < combinacao.length; cont++){
+            if(combinacao[cont] <= 5){
+                lin1++;
+            }else if((combinacao[cont] > 5)&&(combinacao[cont] <= 10)){
+                lin2++;
+            }else if((combinacao[cont] > 10)&&(combinacao[cont] <= 15)){
+                lin3++;
+            }else if((combinacao[cont] > 15)&&(combinacao[cont] <= 20)){
+                lin4++;
+            }else{
+                lin5++;
+            }
+                
+            quantidadeLinhas = Utilitarios.converterAQuantidade(lin1, lin2, lin3, lin4, lin5);
+        }
+        return quantidadeLinhas;
+    }
+    
+    public static String quantColunas(int combinacao[]){
+        String quantidadeColunas = new String();
+        int col1 = 0, col2 = 0, col3 = 0, col4 = 0, col5 = 0;
+        for(int cont = 0; cont < combinacao.length; cont++){
+            if((combinacao[cont] == 1)||(combinacao[cont] == 6)||(combinacao[cont] == 11)||(combinacao[cont] == 16)||(combinacao[cont] == 21)){
+                col1++;
+            }else if((combinacao[cont] == 2)||(combinacao[cont] == 7)||(combinacao[cont] == 12)||(combinacao[cont] == 17)||(combinacao[cont] == 22)){
+                col2++;
+            }else if((combinacao[cont] == 3)||(combinacao[cont] == 8)||(combinacao[cont] == 13)||(combinacao[cont] == 18)||(combinacao[cont] == 23)){
+                col3++;
+            }else if((combinacao[cont] == 4)||(combinacao[cont] == 9)||(combinacao[cont] == 14)||(combinacao[cont] == 19)||(combinacao[cont] == 24)){
+                col4++;
+            }else{
+                col5++;
+            }
+                
+            quantidadeColunas = Utilitarios.converterAQuantidade(col1, col2, col3, col4, col5);
+        }
+        return quantidadeColunas;
+    }
+    
+    public static String converterAQuantidade(int atri1, int atri2, int atri3, int atri4, int atri5){
+        String convertido = new String();
+        ArrayList converter = new ArrayList();
+        converter.add(atri1);
+        converter.add(atri2);
+        converter.add(atri3);
+        converter.add(atri4);
+        converter.add(atri5);
+        Collections.sort(converter);
+        for(int cont = 0; cont < converter.size(); cont++){
+            convertido += " " + converter.get(cont);
+        }
+        return convertido;
     }
 
 }

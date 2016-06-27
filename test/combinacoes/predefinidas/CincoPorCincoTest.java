@@ -44,7 +44,7 @@ public class CincoPorCincoTest {
     public void testMontarFAB() {
         System.out.println("montarFAB");
         int[] fixas = null;
-        CincoPorCinco instance = new CincoPorCinco();
+        Numeros25Cartelas06 instance = new Numeros25Cartelas06();
         int[] expResult = null;
        // int[] result = instance.montarFAB(fixas);
      //   assertArrayEquals(expResult, result);
@@ -59,7 +59,7 @@ public class CincoPorCincoTest {
     public void testMontarFAC() {
         System.out.println("montarFAC");
         int[] fixas = null;
-        CincoPorCinco instance = new CincoPorCinco();
+        Numeros25Cartelas06 instance = new Numeros25Cartelas06();
         int[] expResult = null;
       //  int[] result = instance.montarFAC(fixas);
     //    assertArrayEquals(expResult, result);
@@ -74,7 +74,7 @@ public class CincoPorCincoTest {
     public void testMontarFAD() {
         System.out.println("montarFAD");
         int[] fixas = null;
-        CincoPorCinco instance = new CincoPorCinco();
+        Numeros25Cartelas06 instance = new Numeros25Cartelas06();
         int[] expResult = null;
       //  int[] result = instance.montarFAD(fixas);
       //  assertArrayEquals(expResult, result);
@@ -89,7 +89,7 @@ public class CincoPorCincoTest {
     public void testMontarFBC() {
         System.out.println("montarFBC");
         int[] fixas = null;
-        CincoPorCinco instance = new CincoPorCinco();
+        Numeros25Cartelas06 instance = new Numeros25Cartelas06();
         int[] expResult = null;
        // int[] result = instance.montarFBC(fixas);
      //   assertArrayEquals(expResult, result);
@@ -104,7 +104,7 @@ public class CincoPorCincoTest {
     public void testMontarFBD() {
         System.out.println("montarFBD");
         int[] fixas = null;
-        CincoPorCinco instance = new CincoPorCinco();
+        Numeros25Cartelas06 instance = new Numeros25Cartelas06();
         int[] expResult = null;
       //  int[] result = instance.montarFBD(fixas);
       //  assertArrayEquals(expResult, result);
@@ -119,7 +119,7 @@ public class CincoPorCincoTest {
     public void testMontarFCD() {
         System.out.println("montarFCD");
         int[] fixas = null;
-        CincoPorCinco instance = new CincoPorCinco();
+        Numeros25Cartelas06 instance = new Numeros25Cartelas06();
         int[] expResult = null;
       //  int[] result = instance.montarFCD(fixas);
      //   assertArrayEquals(expResult, result);

@@ -7,7 +7,7 @@ package views.principal;
 
 import views.cadastro.user.TelaCadUsuario;
 import views.cadastro.user.TelaLogin;
-import views.combinacoespredefinidas.TelaCincoPorCinco;
+import views.combinacoespredefinidas.TelaNumeros25Cartelas06;
 import acesso.dados.ConectaBancoDados;
 import java.awt.Color;
 import javax.swing.JOptionPane;
@@ -16,6 +16,10 @@ import preferencias.GerarCombinacaoDuasPreferencias;
 import preferencias.ParesImpares;
 import preferencias.Somatoria;
 import preferencias.UltimoSorteio;
+import views.combinacoespredefinidas.TelaNumeros18Cartelas06;
+import views.combinacoespredefinidas.TelaNumeros25Cartelas09;
+import views.combinacoespredefinidas.TelaNumeros20Cartelas04;
+import views.combinacoespredefinidas.TelaNumeros22Cartelas04;
 
 /**
  *
@@ -27,6 +31,24 @@ public class JanelaPrincipal extends javax.swing.JFrame {
     ParesImpares parImpar = new ParesImpares();
     UltimoSorteio ultimoSorteio = new UltimoSorteio();
     String combinacao;
+    double confiancaCombinacao = 0.0;
+    double cincoPares = 7.11;
+    double novePares = 11.24;
+    double oitoPares = 26.69;
+    double setePares = 30.46;
+    double seisPares = 20.38;
+    
+    double dezRepetidos = 20.75;
+    double noveRepetidos = 34.33;
+    double oitoRepetidos = 25.04;
+    double seteRepetidos = 9.07;
+    double onzeRepetidos = 7.62;
+    
+    double somatoria184ate199 = 34.16;
+    double somatoria200ate215 = 26.09;
+    double somatoria168ate183 = 18.85;
+    double somatoria216ate231 = 12.11;
+    double somatoria152ate167 = 6.09;
 
     public JanelaPrincipal() {
         initComponents();
@@ -59,10 +81,6 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jRadioButtonParesImparesSim = new javax.swing.JRadioButton();
         jRadioButtonParesImparesNao = new javax.swing.JRadioButton();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        jTable3 = new javax.swing.JTable();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
         jRadioButtonPar6 = new javax.swing.JRadioButton();
         jRadioButtonPar7 = new javax.swing.JRadioButton();
         jRadioButtonPar8 = new javax.swing.JRadioButton();
@@ -75,31 +93,12 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jRadioButtonRepetidosSim = new javax.swing.JRadioButton();
         jRadioButtonRepetidosNao = new javax.swing.JRadioButton();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
         jLabel5 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
         jRadioButtonQuantRepetidos8 = new javax.swing.JRadioButton();
         jRadioButtonQuantRepetidos9 = new javax.swing.JRadioButton();
         jRadioButtonQuantRepetidos10 = new javax.swing.JRadioButton();
         jLabel6 = new javax.swing.JLabel();
         jTextFieldConfiancaCombinacao = new javax.swing.JTextField();
-        jPanel1 = new javax.swing.JPanel();
-        jLabel9 = new javax.swing.JLabel();
-        jRadioButtonSomatoriaSim = new javax.swing.JRadioButton();
-        jRadioButtonSomatoriaNao = new javax.swing.JRadioButton();
-        jLabel10 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        jLabel11 = new javax.swing.JLabel();
-        jRadioButtonSomaIntervalo1 = new javax.swing.JRadioButton();
-        jRadioButtonSomaIntervalo2 = new javax.swing.JRadioButton();
-        jRadioButtonSomaIntervalo4 = new javax.swing.JRadioButton();
-        jRadioButtonSomaIntervalo3 = new javax.swing.JRadioButton();
-        jTextFieldSomatoria = new javax.swing.JTextField();
-        jLabel15 = new javax.swing.JLabel();
         jTextFieldComb1 = new javax.swing.JTextField();
         jPanel5 = new javax.swing.JPanel();
         jRadioButtonPriorizarDezenasSim = new javax.swing.JRadioButton();
@@ -107,45 +106,79 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         jComboBoxPriorizarDezenas1 = new javax.swing.JComboBox<>();
         jComboBoxPriorizarDezenas2 = new javax.swing.JComboBox<>();
         jRadioButtonPriorizarDezenasDesabilitar = new javax.swing.JRadioButton();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
         jRadioButtonExcluirDezenasSim = new javax.swing.JRadioButton();
         jRadioButtonExcluirDezenasNao = new javax.swing.JRadioButton();
         jComboBoxExcluirDezenas1 = new javax.swing.JComboBox<>();
         jComboBoxExcluirDezenas2 = new javax.swing.JComboBox<>();
         jRadioButtonExcluirDezenasDesabilitar = new javax.swing.JRadioButton();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel9 = new javax.swing.JLabel();
+        jRadioButtonSomatoriaSim = new javax.swing.JRadioButton();
+        jRadioButtonSomatoriaNao = new javax.swing.JRadioButton();
+        jRadioButtonSomaIntervalo1 = new javax.swing.JRadioButton();
+        jRadioButtonSomaIntervalo2 = new javax.swing.JRadioButton();
+        jRadioButtonSomaIntervalo4 = new javax.swing.JRadioButton();
+        jRadioButtonSomaIntervalo3 = new javax.swing.JRadioButton();
+        jTextField24 = new javax.swing.JTextField();
+        jTextField21 = new javax.swing.JTextField();
+        jTextField16 = new javax.swing.JTextField();
+        jTextField11 = new javax.swing.JTextField();
+        jTextField06 = new javax.swing.JTextField();
         jTextField01 = new javax.swing.JTextField();
         jTextField02 = new javax.swing.JTextField();
-        jTextField03 = new javax.swing.JTextField();
-        jTextField04 = new javax.swing.JTextField();
-        jTextField05 = new javax.swing.JTextField();
-        jTextField06 = new javax.swing.JTextField();
         jTextField07 = new javax.swing.JTextField();
-        jTextField08 = new javax.swing.JTextField();
-        jTextField09 = new javax.swing.JTextField();
-        jTextField10 = new javax.swing.JTextField();
-        jTextField11 = new javax.swing.JTextField();
         jTextField12 = new javax.swing.JTextField();
-        jTextField13 = new javax.swing.JTextField();
-        jTextField14 = new javax.swing.JTextField();
-        jTextField15 = new javax.swing.JTextField();
-        jTextField16 = new javax.swing.JTextField();
         jTextField17 = new javax.swing.JTextField();
-        jTextField18 = new javax.swing.JTextField();
-        jTextField19 = new javax.swing.JTextField();
-        jTextField20 = new javax.swing.JTextField();
-        jTextField21 = new javax.swing.JTextField();
         jTextField22 = new javax.swing.JTextField();
         jTextField23 = new javax.swing.JTextField();
-        jTextField24 = new javax.swing.JTextField();
+        jTextField18 = new javax.swing.JTextField();
+        jTextField13 = new javax.swing.JTextField();
+        jTextField08 = new javax.swing.JTextField();
+        jTextField03 = new javax.swing.JTextField();
+        jTextField04 = new javax.swing.JTextField();
+        jTextField09 = new javax.swing.JTextField();
+        jTextField10 = new javax.swing.JTextField();
+        jTextField15 = new javax.swing.JTextField();
+        jTextField20 = new javax.swing.JTextField();
         jTextField25 = new javax.swing.JTextField();
+        jTextField19 = new javax.swing.JTextField();
+        jTextField14 = new javax.swing.JTextField();
+        jTextField05 = new javax.swing.JTextField();
+        jTextFieldSomatoria = new javax.swing.JTextField();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jTextFieldQuantPar = new javax.swing.JTextField();
+        jLabel20 = new javax.swing.JLabel();
+        jTextFieldQuantImpar = new javax.swing.JTextField();
+        jLabel21 = new javax.swing.JLabel();
+        jTextFieldDistriLinhas = new javax.swing.JTextField();
+        jLabel22 = new javax.swing.JLabel();
+        jTextFieldDistriColunas = new javax.swing.JTextField();
+        jLabel23 = new javax.swing.JLabel();
+        jTextFieldQuantRepetidos = new javax.swing.JTextField();
+        jLabel24 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem7 = new javax.swing.JMenuItem();
         jMenuItem8 = new javax.swing.JMenuItem();
         jMenuItem9 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
-        jMenuItem3 = new javax.swing.JMenuItem();
         jMenuItem4 = new javax.swing.JMenuItem();
+        jMenuItem13 = new javax.swing.JMenuItem();
+        jMenuItem14 = new javax.swing.JMenuItem();
+        jMenuItem3 = new javax.swing.JMenuItem();
+        jMenuItem12 = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
@@ -198,25 +231,6 @@ public class JanelaPrincipal extends javax.swing.JFrame {
                 jRadioButtonParesImparesNaoActionPerformed(evt);
             }
         });
-
-        jTable3.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {"7", "8", "30,8%"},
-                {"8", "7", "26,47%"},
-                {"6", "9", "20,43%"},
-                {"9", "6", "11,19%"},
-                {"TOTAL", null, "88,89%"}
-            },
-            new String [] {
-                "Pares", "Impares", "Porcentagem"
-            }
-        ));
-        jScrollPane3.setViewportView(jTable3);
-
-        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel7.setText("Estatísticas de Sorteios Anteriores");
-
-        jLabel12.setText("* Quantidade de pares e impares nas 15 desenas sorteadas");
 
         buttonGroupQuantPares.add(jRadioButtonPar6);
         jRadioButtonPar6.setText("6");
@@ -289,41 +303,32 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jRadioButtonParesImparesSim)
-                                    .addComponent(jLabel2))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jRadioButtonParesImparesNao)
-                                    .addGroup(jPanel3Layout.createSequentialGroup()
-                                        .addGap(21, 21, 21)
-                                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                                .addGap(10, 10, 10)
-                                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addComponent(jRadioButtonImpar6)
-                                                    .addComponent(jRadioButtonImpar7)
-                                                    .addComponent(jRadioButtonImpar8)
-                                                    .addComponent(jRadioButtonImpar9)))
-                                            .addComponent(jLabel3)))))
-                            .addComponent(jRadioButtonPar6)
-                            .addComponent(jRadioButtonPar7)
-                            .addComponent(jRadioButtonPar8)
-                            .addComponent(jRadioButtonPar9))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jRadioButtonParesImparesSim)
+                            .addComponent(jLabel2))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel7)
-                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 326, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addGap(21, 21, 21)
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel3Layout.createSequentialGroup()
+                                        .addGap(10, 10, 10)
+                                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jRadioButtonImpar6)
+                                            .addComponent(jRadioButtonImpar7)
+                                            .addComponent(jRadioButtonImpar8)
+                                            .addComponent(jRadioButtonImpar9)))
+                                    .addComponent(jLabel3)))
+                            .addComponent(jRadioButtonParesImparesNao)))
+                    .addComponent(jRadioButtonPar6)
+                    .addComponent(jRadioButtonPar7)
+                    .addComponent(jRadioButtonPar8)
+                    .addComponent(jRadioButtonPar9)
+                    .addComponent(jLabel1))
+                .addGap(334, 334, 334))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -335,7 +340,7 @@ public class JanelaPrincipal extends javax.swing.JFrame {
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jRadioButtonParesImparesSim)
                             .addComponent(jRadioButtonParesImparesNao))
-                        .addGap(12, 12, 12)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel3)
                             .addComponent(jLabel2))
@@ -349,25 +354,17 @@ public class JanelaPrincipal extends javax.swing.JFrame {
                         .addComponent(jRadioButtonPar9))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addComponent(jLabel12)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel7)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addComponent(jRadioButtonImpar6)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jRadioButtonImpar7)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jRadioButtonImpar8)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jRadioButtonImpar9)))))
+                        .addComponent(jRadioButtonImpar6)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jRadioButtonImpar7)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jRadioButtonImpar8)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jRadioButtonImpar9)))
                 .addContainerGap())
         );
 
-        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Números Repetidos do Sorteio Anterior", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 14))); // NOI18N
+        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Repetidos do Sorteio Anterior", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 14))); // NOI18N
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel4.setText("Ativar?");
@@ -389,28 +386,8 @@ public class JanelaPrincipal extends javax.swing.JFrame {
             }
         });
 
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {"8", "25,06%"},
-                {"9", "34,25%"},
-                {"10", "20,45%"},
-                {"TOTAL", "79,76%"}
-            },
-            new String [] {
-                "Repetidos", "Porcentagem"
-            }
-        ));
-        jScrollPane2.setViewportView(jTable2);
-
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel5.setText("Repetidos");
-
-        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel8.setText("Estatísticas de Sorteios Anteriores");
-
-        jLabel13.setText("* Quantidade de desenas que saíram no sorteio  ");
-
-        jLabel14.setText("anterior e se repetem em um novo");
 
         buttonGroupQuantRepetidos.add(jRadioButtonQuantRepetidos8);
         jRadioButtonQuantRepetidos8.setText("8");
@@ -440,208 +417,56 @@ public class JanelaPrincipal extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addComponent(jLabel5)
-                        .addGap(23, 23, 23)
-                        .addComponent(jLabel8))
-                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(jPanel4Layout.createSequentialGroup()
-                            .addComponent(jRadioButtonRepetidosSim)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jRadioButtonRepetidosNao)
-                            .addGap(58, 58, 58)
-                            .addComponent(jLabel14))
-                        .addGroup(jPanel4Layout.createSequentialGroup()
-                            .addComponent(jLabel4)
-                            .addGap(32, 32, 32)
-                            .addComponent(jLabel13)))
-                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addComponent(jRadioButtonRepetidosSim)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jRadioButtonRepetidosNao))
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel5)
+                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(jPanel4Layout.createSequentialGroup()
-                                    .addGap(22, 22, 22)
-                                    .addComponent(jRadioButtonQuantRepetidos8, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addComponent(jRadioButtonQuantRepetidos10, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jRadioButtonQuantRepetidos9, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(12, Short.MAX_VALUE))
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addGap(22, 22, 22)
+                                .addComponent(jRadioButtonQuantRepetidos8, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jRadioButtonQuantRepetidos10, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jRadioButtonQuantRepetidos9, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(160, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel13))
+                .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addComponent(jLabel14)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel8))
                     .addComponent(jRadioButtonRepetidosNao)
                     .addComponent(jRadioButtonRepetidosSim))
-                .addGap(6, 6, 6)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addComponent(jLabel5)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRadioButtonQuantRepetidos8)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButtonQuantRepetidos9)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButtonQuantRepetidos10))
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(20, 20, 20)
+                .addComponent(jLabel5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jRadioButtonQuantRepetidos8)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jRadioButtonQuantRepetidos9)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jRadioButtonQuantRepetidos10)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel6.setText("Confiança da Combinação");
 
+        jTextFieldConfiancaCombinacao.setEditable(false);
         jTextFieldConfiancaCombinacao.setFont(new java.awt.Font("Noto Sans", 0, 48)); // NOI18N
         jTextFieldConfiancaCombinacao.setForeground(new java.awt.Color(39, 160, 38));
-        jTextFieldConfiancaCombinacao.setText("27,93%");
         jTextFieldConfiancaCombinacao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldConfiancaCombinacaoActionPerformed(evt);
             }
         });
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Somatória", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 14))); // NOI18N
-
-        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel9.setText("Ativar?");
-
-        buttonGroupSomatoria.add(jRadioButtonSomatoriaSim);
-        jRadioButtonSomatoriaSim.setText("Sim");
-        jRadioButtonSomatoriaSim.addActionListener(new java.awt.event.ActionListener() {
+        jTextFieldComb1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButtonSomatoriaSimActionPerformed(evt);
+                jTextFieldComb1ActionPerformed(evt);
             }
         });
-
-        buttonGroupSomatoria.add(jRadioButtonSomatoriaNao);
-        jRadioButtonSomatoriaNao.setText("Não");
-        jRadioButtonSomatoriaNao.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButtonSomatoriaNaoActionPerformed(evt);
-            }
-        });
-
-        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel10.setText("Estatísticas de Sorteios Anteriores");
-
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {"168", "183", "18,87%"},
-                {"184", "199", "34,6%"},
-                {"200", "215", "26,7%"},
-                {"216", "231", "12,01%"},
-                {"TOTAL", null, "92,18%"}
-            },
-            new String [] {
-                "Inicio", "Fim", "Porcentagem"
-            }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, false, false
-            };
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        jScrollPane1.setViewportView(jTable1);
-
-        jLabel11.setText("* Soma das 15 desenas sorteadas");
-
-        buttonGroupSovaIntervalos.add(jRadioButtonSomaIntervalo1);
-        jRadioButtonSomaIntervalo1.setText("168 ~ 183");
-        jRadioButtonSomaIntervalo1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButtonSomaIntervalo1ActionPerformed(evt);
-            }
-        });
-
-        buttonGroupSovaIntervalos.add(jRadioButtonSomaIntervalo2);
-        jRadioButtonSomaIntervalo2.setSelected(true);
-        jRadioButtonSomaIntervalo2.setText("184 ~ 199");
-
-        buttonGroupSovaIntervalos.add(jRadioButtonSomaIntervalo4);
-        jRadioButtonSomaIntervalo4.setText("216 ~ 231");
-
-        buttonGroupSovaIntervalos.add(jRadioButtonSomaIntervalo3);
-        jRadioButtonSomaIntervalo3.setText("200 ~ 215");
-        jRadioButtonSomaIntervalo3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButtonSomaIntervalo3ActionPerformed(evt);
-            }
-        });
-
-        jLabel15.setText("Somatória:");
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(16, 16, 16)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jRadioButtonSomaIntervalo4)
-                            .addComponent(jRadioButtonSomaIntervalo1)
-                            .addComponent(jRadioButtonSomaIntervalo2)
-                            .addComponent(jRadioButtonSomaIntervalo3))
-                        .addGap(36, 36, 36)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel10))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel9)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jRadioButtonSomatoriaSim)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jRadioButtonSomatoriaNao)))
-                        .addGap(34, 34, 34)
-                        .addComponent(jLabel11)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel15)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextFieldSomatoria, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(29, 29, 29))))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jLabel9)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButtonSomatoriaSim)
-                    .addComponent(jRadioButtonSomatoriaNao))
-                .addGap(33, 33, 33)
-                .addComponent(jRadioButtonSomaIntervalo1, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jRadioButtonSomaIntervalo2, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jRadioButtonSomaIntervalo3, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jRadioButtonSomaIntervalo4, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel11)
-                    .addComponent(jTextFieldSomatoria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel15))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel10)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
 
         jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Priorizar Dezenas", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 14))); // NOI18N
 
@@ -686,6 +511,10 @@ public class JanelaPrincipal extends javax.swing.JFrame {
             }
         });
 
+        jLabel16.setText("*Números que vão");
+
+        jLabel18.setText("aparecer na combinação");
+
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
@@ -696,15 +525,17 @@ public class JanelaPrincipal extends javax.swing.JFrame {
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addComponent(jComboBoxPriorizarDezenas2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButtonPriorizarDezenasDesabilitar, javax.swing.GroupLayout.DEFAULT_SIZE, 93, Short.MAX_VALUE))
+                        .addComponent(jRadioButtonPriorizarDezenasDesabilitar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jComboBoxPriorizarDezenas1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel5Layout.createSequentialGroup()
                                 .addComponent(jRadioButtonPriorizarDezenasSim)
-                                .addGap(18, 18, 18)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jRadioButtonPriorizarDezenasNao))
-                            .addComponent(jComboBoxPriorizarDezenas1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                            .addComponent(jLabel16)
+                            .addComponent(jLabel18))
+                        .addGap(0, 12, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel5Layout.setVerticalGroup(
@@ -713,13 +544,17 @@ public class JanelaPrincipal extends javax.swing.JFrame {
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jRadioButtonPriorizarDezenasSim)
                     .addComponent(jRadioButtonPriorizarDezenasNao))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jComboBoxPriorizarDezenas1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(16, 16, 16)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jComboBoxPriorizarDezenas2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jRadioButtonPriorizarDezenasDesabilitar))
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel16)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel18)
+                .addGap(0, 40, Short.MAX_VALUE))
         );
 
         jPanel6.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Excluir Dezenas", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 14))); // NOI18N
@@ -755,6 +590,10 @@ public class JanelaPrincipal extends javax.swing.JFrame {
             }
         });
 
+        jLabel8.setText("*Números que não vão");
+
+        jLabel10.setText("aparecer na combinação");
+
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
@@ -762,16 +601,22 @@ public class JanelaPrincipal extends javax.swing.JFrame {
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jComboBoxExcluirDezenas1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addComponent(jRadioButtonExcluirDezenasSim)
-                        .addGap(18, 18, 18)
-                        .addComponent(jRadioButtonExcluirDezenasNao))
                     .addGroup(jPanel6Layout.createSequentialGroup()
                         .addComponent(jComboBoxExcluirDezenas2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButtonExcluirDezenasDesabilitar, javax.swing.GroupLayout.DEFAULT_SIZE, 93, Short.MAX_VALUE)))
-                .addContainerGap())
+                        .addComponent(jRadioButtonExcluirDezenasDesabilitar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
+                        .addContainerGap(2, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jComboBoxExcluirDezenas1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel6Layout.createSequentialGroup()
+                                .addComponent(jRadioButtonExcluirDezenasSim)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jRadioButtonExcluirDezenasNao))
+                            .addComponent(jLabel10))
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -779,14 +624,119 @@ public class JanelaPrincipal extends javax.swing.JFrame {
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jRadioButtonExcluirDezenasNao)
                     .addComponent(jRadioButtonExcluirDezenasSim))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jComboBoxExcluirDezenas1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jComboBoxExcluirDezenas2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jRadioButtonExcluirDezenasDesabilitar))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel8)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel10)
+                .addContainerGap(39, Short.MAX_VALUE))
+        );
+
+        jLabel15.setText("Somatória:");
+
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Somatória", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 14))); // NOI18N
+
+        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel9.setText("Ativar?");
+
+        buttonGroupSomatoria.add(jRadioButtonSomatoriaSim);
+        jRadioButtonSomatoriaSim.setSelected(true);
+        jRadioButtonSomatoriaSim.setText("Sim");
+        jRadioButtonSomatoriaSim.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButtonSomatoriaSimActionPerformed(evt);
+            }
+        });
+
+        buttonGroupSomatoria.add(jRadioButtonSomatoriaNao);
+        jRadioButtonSomatoriaNao.setText("Não");
+        jRadioButtonSomatoriaNao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButtonSomatoriaNaoActionPerformed(evt);
+            }
+        });
+
+        buttonGroupSovaIntervalos.add(jRadioButtonSomaIntervalo1);
+        jRadioButtonSomaIntervalo1.setText("168 ~ 183");
+        jRadioButtonSomaIntervalo1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButtonSomaIntervalo1ActionPerformed(evt);
+            }
+        });
+
+        buttonGroupSovaIntervalos.add(jRadioButtonSomaIntervalo2);
+        jRadioButtonSomaIntervalo2.setSelected(true);
+        jRadioButtonSomaIntervalo2.setText("184 ~ 199");
+
+        buttonGroupSovaIntervalos.add(jRadioButtonSomaIntervalo4);
+        jRadioButtonSomaIntervalo4.setText("216 ~ 231");
+
+        buttonGroupSovaIntervalos.add(jRadioButtonSomaIntervalo3);
+        jRadioButtonSomaIntervalo3.setText("200 ~ 215");
+        jRadioButtonSomaIntervalo3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButtonSomaIntervalo3ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(16, 16, 16)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jRadioButtonSomaIntervalo4)
+                            .addComponent(jRadioButtonSomaIntervalo1)
+                            .addComponent(jRadioButtonSomaIntervalo2)
+                            .addComponent(jRadioButtonSomaIntervalo3)))
+                    .addComponent(jLabel9)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jRadioButtonSomatoriaSim)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jRadioButtonSomatoriaNao)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(jLabel9)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jRadioButtonSomatoriaSim)
+                    .addComponent(jRadioButtonSomatoriaNao))
+                .addGap(18, 18, 18)
+                .addComponent(jRadioButtonSomaIntervalo1, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jRadioButtonSomaIntervalo2, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jRadioButtonSomaIntervalo3, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jRadioButtonSomaIntervalo4, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        jTextField24.setEditable(false);
+        jTextField24.setText("24");
+
+        jTextField21.setEditable(false);
+        jTextField21.setText("21");
+
+        jTextField16.setEditable(false);
+        jTextField16.setText("16");
+
+        jTextField11.setEditable(false);
+        jTextField11.setText("11");
+
+        jTextField06.setEditable(false);
+        jTextField06.setText("06");
 
         jTextField01.setEditable(false);
         jTextField01.setText("01");
@@ -794,52 +744,11 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         jTextField02.setEditable(false);
         jTextField02.setText("02");
 
-        jTextField03.setEditable(false);
-        jTextField03.setText("03");
-
-        jTextField04.setEditable(false);
-        jTextField04.setText("04");
-
-        jTextField05.setEditable(false);
-        jTextField05.setText("05");
-
-        jTextField06.setEditable(false);
-        jTextField06.setText("06");
-
         jTextField07.setEditable(false);
         jTextField07.setText("07");
 
-        jTextField08.setEditable(false);
-        jTextField08.setText("08");
-
-        jTextField09.setEditable(false);
-        jTextField09.setText("09");
-
-        jTextField10.setEditable(false);
-        jTextField10.setText("10");
-
-        jTextField11.setEditable(false);
-        jTextField11.setText("11");
-
         jTextField12.setEditable(false);
         jTextField12.setText("12");
-
-        jTextField13.setEditable(false);
-        jTextField13.setText("13");
-
-        jTextField14.setEditable(false);
-        jTextField14.setText("14");
-        jTextField14.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField14ActionPerformed(evt);
-            }
-        });
-
-        jTextField15.setEditable(false);
-        jTextField15.setText("15");
-
-        jTextField16.setEditable(false);
-        jTextField16.setText("16");
 
         jTextField17.setEditable(false);
         jTextField17.setText("17");
@@ -849,29 +758,124 @@ public class JanelaPrincipal extends javax.swing.JFrame {
             }
         });
 
-        jTextField18.setEditable(false);
-        jTextField18.setText("18");
-
-        jTextField19.setEditable(false);
-        jTextField19.setText("19");
-
-        jTextField20.setEditable(false);
-        jTextField20.setText("20");
-
-        jTextField21.setEditable(false);
-        jTextField21.setText("21");
-
         jTextField22.setEditable(false);
         jTextField22.setText("22");
 
         jTextField23.setEditable(false);
         jTextField23.setText("23");
 
-        jTextField24.setEditable(false);
-        jTextField24.setText("24");
+        jTextField18.setEditable(false);
+        jTextField18.setText("18");
+
+        jTextField13.setEditable(false);
+        jTextField13.setText("13");
+
+        jTextField08.setEditable(false);
+        jTextField08.setText("08");
+
+        jTextField03.setEditable(false);
+        jTextField03.setText("03");
+
+        jTextField04.setEditable(false);
+        jTextField04.setText("04");
+
+        jTextField09.setEditable(false);
+        jTextField09.setText("09");
+
+        jTextField10.setEditable(false);
+        jTextField10.setText("10");
+
+        jTextField15.setEditable(false);
+        jTextField15.setText("15");
+
+        jTextField20.setEditable(false);
+        jTextField20.setText("20");
 
         jTextField25.setEditable(false);
         jTextField25.setText("25");
+
+        jTextField19.setEditable(false);
+        jTextField19.setText("19");
+
+        jTextField14.setEditable(false);
+        jTextField14.setText("14");
+        jTextField14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField14ActionPerformed(evt);
+            }
+        });
+
+        jTextField05.setEditable(false);
+        jTextField05.setText("05");
+
+        jTextFieldSomatoria.setEditable(false);
+        jTextFieldSomatoria.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldSomatoriaActionPerformed(evt);
+            }
+        });
+
+        jLabel17.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel17.setText("Informações da Combinação Gerada:");
+
+        jLabel12.setText("* Quantidade de pares e impares");
+
+        jLabel11.setText("* Soma das 15 desenas sorteadas");
+
+        jLabel7.setText("nas 15 dezenas da combinação");
+
+        jLabel13.setText("* Quantidade de dezenas que se sairam no último  ");
+
+        jLabel14.setText("sorteio e se repetiram nessa combinação");
+
+        jLabel19.setText("Pares:");
+
+        jTextFieldQuantPar.setEditable(false);
+        jTextFieldQuantPar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldQuantParActionPerformed(evt);
+            }
+        });
+
+        jLabel20.setText("Impares:");
+
+        jTextFieldQuantImpar.setEditable(false);
+        jTextFieldQuantImpar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldQuantImparActionPerformed(evt);
+            }
+        });
+
+        jLabel21.setText("Distribuição em Linhas:");
+
+        jTextFieldDistriLinhas.setEditable(false);
+        jTextFieldDistriLinhas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldDistriLinhasActionPerformed(evt);
+            }
+        });
+
+        jLabel22.setText("Distribuição em Colunas:");
+
+        jTextFieldDistriColunas.setEditable(false);
+        jTextFieldDistriColunas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldDistriColunasActionPerformed(evt);
+            }
+        });
+
+        jLabel23.setText("Repetidos S.Anterior:");
+
+        jTextFieldQuantRepetidos.setEditable(false);
+        jTextFieldQuantRepetidos.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jTextFieldQuantRepetidos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldQuantRepetidosActionPerformed(evt);
+            }
+        });
+
+        jLabel24.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        jLabel24.setText("%");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -879,146 +883,233 @@ public class JanelaPrincipal extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel6)
-                            .addComponent(jTextFieldConfiancaCombinacao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(37, 37, 37)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 284, Short.MAX_VALUE)
-                                .addComponent(jTextFieldComb1))
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGap(53, 53, 53)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, 163, Short.MAX_VALUE)
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addGap(10, 10, 10)
+                                        .addComponent(jLabel7))
+                                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 163, Short.MAX_VALUE))
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addGap(22, 22, 22)
+                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                                .addGap(10, 10, 10)
+                                                .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(jLabel13)))))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jTextFieldConfiancaCombinacao, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jLabel24)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 219, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(39, 39, 39))))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel6)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jTextFieldComb1, javax.swing.GroupLayout.PREFERRED_SIZE, 301, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel11))
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel17)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addComponent(jLabel15)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jTextFieldSomatoria, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(33, 33, 33)
+                                        .addComponent(jLabel19)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jTextFieldQuantPar, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(30, 30, 30)
+                                        .addComponent(jLabel20)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jTextFieldQuantImpar, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel22)
+                                            .addComponent(jLabel21))
+                                        .addGap(18, 18, 18)
                                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                            .addComponent(jTextField21, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
-                                            .addComponent(jTextField16, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
-                                                .addComponent(jTextField22, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jTextField23, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jTextField24, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jTextField25, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
-                                                .addComponent(jTextField17, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jTextField18, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jTextField19, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jTextField20, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                            .addComponent(jTextFieldDistriColunas, javax.swing.GroupLayout.DEFAULT_SIZE, 71, Short.MAX_VALUE)
+                                            .addComponent(jTextFieldDistriLinhas))
+                                        .addGap(18, 18, 18)
+                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                                .addGap(10, 10, 10)
+                                                .addComponent(jTextFieldQuantRepetidos, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(jLabel23))))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(jTextField21)
+                                    .addComponent(jTextField16, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jTextField01, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jTextField17, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextField02, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jTextField18, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextField03, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jTextField19, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextField04, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextField05, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(jTextField20, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jTextField06, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jTextField22, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextField07, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jTextField23, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextField08, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jTextField24, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextField09, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                                        .addComponent(jTextField25, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jTextField01, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTextField02, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTextField03, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTextField04, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTextField05, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jTextField06, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTextField07, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTextField08, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTextField09, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(66, 66, 66))))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel12)
+                    .addComponent(jLabel13))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel7)
+                    .addComponent(jLabel14))
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(22, 22, 22)
+                        .addGap(6, 6, 6)
+                        .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jTextField01, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField02, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField03, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField04, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField05, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(7, 7, 7)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jTextField06, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField07, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField08, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField09, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jTextField16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jTextField21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel11)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField01, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField02, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField03, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField04, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField05, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel6)
+                            .addComponent(jTextFieldComb1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(8, 8, 8)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jTextFieldConfiancaCombinacao, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel24))
+                        .addGap(4, 4, 4))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jLabel17)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField06, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField07, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField08, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField09, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(jTextFieldSomatoria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel15)
+                            .addComponent(jTextFieldQuantPar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel19)
+                            .addComponent(jLabel20)
+                            .addComponent(jTextFieldQuantImpar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(jLabel21)
+                            .addComponent(jTextFieldDistriLinhas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel23))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jTextFieldDistriColunas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextFieldQuantRepetidos, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel22))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jTextFieldComb1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel6)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jButton1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextFieldConfiancaCombinacao, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jPanel6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 0, Short.MAX_VALUE)
-                        .addComponent(jPanel5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())))
         );
 
         jMenuBar1.setBackground(new java.awt.Color(255, 255, 255));
@@ -1043,9 +1134,43 @@ public class JanelaPrincipal extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu1);
 
-        jMenu2.setText("Preferências");
+        jMenu2.setText("Fechamentos");
 
-        jMenuItem3.setText("Escolher Apartir de Preferências");
+        jMenuItem4.setText("18 Números / 6 Cartelas ");
+        jMenuItem4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenuItem4MouseClicked(evt);
+            }
+        });
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem4ActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMenuItem4);
+
+        jMenuItem13.setText("20 Números / 4 Cartelas");
+        jMenuItem13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem13ActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMenuItem13);
+
+        jMenuItem14.setText("22 Números / 4 Cartelas");
+        jMenuItem14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem14ActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMenuItem14);
+
+        jMenuItem3.setText("25 Números / 6 Cartelas");
+        jMenuItem3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenuItem3MouseClicked(evt);
+            }
+        });
         jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem3ActionPerformed(evt);
@@ -1053,13 +1178,13 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         });
         jMenu2.add(jMenuItem3);
 
-        jMenuItem4.setText("Gerar Combinações Pré Definidas");
-        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItem12.setText("25 Números / 9 Cartelas");
+        jMenuItem12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem4ActionPerformed(evt);
+                jMenuItem12ActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem4);
+        jMenu2.add(jMenuItem12);
 
         jMenuBar1.add(jMenu2);
 
@@ -1153,10 +1278,7 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -1196,35 +1318,190 @@ public class JanelaPrincipal extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jMenuItem6ActionPerformed
 
-    private void jRadioButtonRepetidosNaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonRepetidosNaoActionPerformed
-        jRadioButtonQuantRepetidos8.setEnabled(false);
-        jRadioButtonQuantRepetidos9.setEnabled(false);
-        jRadioButtonQuantRepetidos10.setEnabled(false);
-    }//GEN-LAST:event_jRadioButtonRepetidosNaoActionPerformed
-
-    private void jTextFieldConfiancaCombinacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldConfiancaCombinacaoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldConfiancaCombinacaoActionPerformed
-
-    private void jRadioButtonRepetidosSimActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonRepetidosSimActionPerformed
-        jRadioButtonQuantRepetidos8.setEnabled(true);
-        jRadioButtonQuantRepetidos9.setEnabled(true);
-        jRadioButtonQuantRepetidos10.setEnabled(true);
-    }//GEN-LAST:event_jRadioButtonRepetidosSimActionPerformed
-
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
-        TelaCincoPorCinco telaGerarCombinacoes = new TelaCincoPorCinco();
-        telaGerarCombinacoes.setVisible(true);
+        TelaNumeros18Cartelas06 telaDivisaoPorGrupos01 = new TelaNumeros18Cartelas06();
+        telaDivisaoPorGrupos01.setVisible(true);
     }//GEN-LAST:event_jMenuItem4ActionPerformed
-
-    private void jRadioButtonSomaIntervalo3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonSomaIntervalo3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButtonSomaIntervalo3ActionPerformed
 
     private void jMenu7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu7MouseClicked
         conexaoTelaPrincipal.desconexao();
         System.exit(0);
     }//GEN-LAST:event_jMenu7MouseClicked
+
+    private void jMenuItem1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItem1MouseClicked
+
+    }//GEN-LAST:event_jMenuItem1MouseClicked
+
+    private void jMenuItem12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem12ActionPerformed
+        TelaNumeros25Cartelas09 telaDivisaoPorGrupos02 = new TelaNumeros25Cartelas09();
+        telaDivisaoPorGrupos02.setVisible(true);
+    }//GEN-LAST:event_jMenuItem12ActionPerformed
+
+    private void jMenuItem14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem14ActionPerformed
+        TelaNumeros22Cartelas04 telaSortePorNumeros22 = new TelaNumeros22Cartelas04();
+        telaSortePorNumeros22.setVisible(true);
+    }//GEN-LAST:event_jMenuItem14ActionPerformed
+
+    private void jMenuItem4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItem4MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem4MouseClicked
+
+    private void jMenuItem3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItem3MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem3MouseClicked
+
+    private void jMenuItem13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem13ActionPerformed
+        TelaNumeros20Cartelas04 telaSortePorNumeros20 = new TelaNumeros20Cartelas04();
+        telaSortePorNumeros20.setVisible(true);
+    }//GEN-LAST:event_jMenuItem13ActionPerformed
+
+    private void jTextField17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField17ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField17ActionPerformed
+
+    private void jTextField14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField14ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField14ActionPerformed
+
+    private void jRadioButtonExcluirDezenasDesabilitarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonExcluirDezenasDesabilitarActionPerformed
+        if (jRadioButtonExcluirDezenasDesabilitar.isSelected()) {
+            jComboBoxExcluirDezenas2.setEnabled(false);
+        } else {
+            jComboBoxExcluirDezenas2.setEnabled(true);
+        }
+    }//GEN-LAST:event_jRadioButtonExcluirDezenasDesabilitarActionPerformed
+
+    private void jRadioButtonExcluirDezenasNaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonExcluirDezenasNaoActionPerformed
+        jComboBoxExcluirDezenas1.setEnabled(false);
+        jComboBoxExcluirDezenas2.setEnabled(false);
+        jRadioButtonExcluirDezenasDesabilitar.setEnabled(false);
+    }//GEN-LAST:event_jRadioButtonExcluirDezenasNaoActionPerformed
+
+    private void jRadioButtonExcluirDezenasSimActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonExcluirDezenasSimActionPerformed
+        jRadioButtonExcluirDezenasDesabilitar.setSelected(false);
+        jComboBoxExcluirDezenas1.setEnabled(true);
+        jComboBoxExcluirDezenas2.setEnabled(true);
+        jRadioButtonExcluirDezenasDesabilitar.setEnabled(true);
+    }//GEN-LAST:event_jRadioButtonExcluirDezenasSimActionPerformed
+
+    private void jRadioButtonPriorizarDezenasDesabilitarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonPriorizarDezenasDesabilitarActionPerformed
+        if (jRadioButtonPriorizarDezenasDesabilitar.isSelected()) {
+            jComboBoxPriorizarDezenas2.setEnabled(false);
+        } else {
+            jComboBoxPriorizarDezenas2.setEnabled(true);
+        }
+    }//GEN-LAST:event_jRadioButtonPriorizarDezenasDesabilitarActionPerformed
+
+    private void jComboBoxPriorizarDezenas2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxPriorizarDezenas2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBoxPriorizarDezenas2ActionPerformed
+
+    private void jComboBoxPriorizarDezenas1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxPriorizarDezenas1ActionPerformed
+
+    }//GEN-LAST:event_jComboBoxPriorizarDezenas1ActionPerformed
+
+    private void jRadioButtonPriorizarDezenasNaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonPriorizarDezenasNaoActionPerformed
+        jComboBoxPriorizarDezenas1.setEnabled(false);
+        jComboBoxPriorizarDezenas2.setEnabled(false);
+        jRadioButtonPriorizarDezenasDesabilitar.setEnabled(false);
+    }//GEN-LAST:event_jRadioButtonPriorizarDezenasNaoActionPerformed
+
+    private void jRadioButtonPriorizarDezenasSimActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonPriorizarDezenasSimActionPerformed
+        jRadioButtonPriorizarDezenasDesabilitar.setSelected(false);
+        jComboBoxPriorizarDezenas1.setEnabled(true);
+        jComboBoxPriorizarDezenas2.setEnabled(true);
+        jRadioButtonPriorizarDezenasDesabilitar.setEnabled(true);
+    }//GEN-LAST:event_jRadioButtonPriorizarDezenasSimActionPerformed
+
+    private void jRadioButtonSomaIntervalo3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonSomaIntervalo3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButtonSomaIntervalo3ActionPerformed
+
+    private void jRadioButtonSomaIntervalo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonSomaIntervalo1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButtonSomaIntervalo1ActionPerformed
+
+    private void jRadioButtonSomatoriaNaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonSomatoriaNaoActionPerformed
+        jRadioButtonSomaIntervalo1.setEnabled(false);
+        jRadioButtonSomaIntervalo2.setEnabled(false);
+        jRadioButtonSomaIntervalo3.setEnabled(false);
+        jRadioButtonSomaIntervalo4.setEnabled(false);
+        jTextFieldConfiancaCombinacao.setText(String.format("%.2f", this.calcularConfianca()));
+    }//GEN-LAST:event_jRadioButtonSomatoriaNaoActionPerformed
+
+    private void jRadioButtonSomatoriaSimActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonSomatoriaSimActionPerformed
+        jRadioButtonSomaIntervalo1.setEnabled(true);
+        jRadioButtonSomaIntervalo2.setEnabled(true);
+        jRadioButtonSomaIntervalo3.setEnabled(true);
+        jRadioButtonSomaIntervalo4.setEnabled(true);
+        jTextFieldConfiancaCombinacao.setText(String.format("%.2f", this.calcularConfianca()));
+    }//GEN-LAST:event_jRadioButtonSomatoriaSimActionPerformed
+
+    private void jTextFieldConfiancaCombinacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldConfiancaCombinacaoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldConfiancaCombinacaoActionPerformed
+
+    private void jRadioButtonQuantRepetidos10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonQuantRepetidos10ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButtonQuantRepetidos10ActionPerformed
+
+    private void jRadioButtonQuantRepetidos9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonQuantRepetidos9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButtonQuantRepetidos9ActionPerformed
+
+    private void jRadioButtonRepetidosNaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonRepetidosNaoActionPerformed
+        jRadioButtonQuantRepetidos8.setEnabled(false);
+        jRadioButtonQuantRepetidos9.setEnabled(false);
+        jRadioButtonQuantRepetidos10.setEnabled(false);
+        jTextFieldConfiancaCombinacao.setText(String.format("%.2f", this.calcularConfianca()));
+    }//GEN-LAST:event_jRadioButtonRepetidosNaoActionPerformed
+
+    private void jRadioButtonRepetidosSimActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonRepetidosSimActionPerformed
+        jRadioButtonQuantRepetidos8.setEnabled(true);
+        jRadioButtonQuantRepetidos9.setEnabled(true);
+        jRadioButtonQuantRepetidos10.setEnabled(true);
+        jTextFieldConfiancaCombinacao.setText(String.format("%.2f", this.calcularConfianca()));
+    }//GEN-LAST:event_jRadioButtonRepetidosSimActionPerformed
+
+    private void jRadioButtonImpar6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonImpar6ActionPerformed
+        jRadioButtonPar9.setSelected(true);
+        jTextFieldConfiancaCombinacao.setText(String.format("%.2f", this.calcularConfianca()));
+    }//GEN-LAST:event_jRadioButtonImpar6ActionPerformed
+
+    private void jRadioButtonImpar7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonImpar7ActionPerformed
+        jRadioButtonPar8.setSelected(true);
+        jTextFieldConfiancaCombinacao.setText(String.format("%.2f", this.calcularConfianca()));
+    }//GEN-LAST:event_jRadioButtonImpar7ActionPerformed
+
+    private void jRadioButtonImpar8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonImpar8ActionPerformed
+        jRadioButtonPar7.setSelected(true);
+        jTextFieldConfiancaCombinacao.setText(String.format("%.2f", this.calcularConfianca()));
+    }//GEN-LAST:event_jRadioButtonImpar8ActionPerformed
+
+    private void jRadioButtonImpar9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonImpar9ActionPerformed
+        jRadioButtonPar6.setSelected(true);
+        jTextFieldConfiancaCombinacao.setText(String.format("%.2f", this.calcularConfianca()));
+    }//GEN-LAST:event_jRadioButtonImpar9ActionPerformed
+
+    private void jRadioButtonPar9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonPar9ActionPerformed
+        jRadioButtonImpar6.setSelected(true);
+        jTextFieldConfiancaCombinacao.setText(String.format("%.2f", this.calcularConfianca()));
+    }//GEN-LAST:event_jRadioButtonPar9ActionPerformed
+
+    private void jRadioButtonPar8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonPar8ActionPerformed
+        jRadioButtonImpar7.setSelected(true);
+        jTextFieldConfiancaCombinacao.setText(String.format("%.2f", this.calcularConfianca()));
+    }//GEN-LAST:event_jRadioButtonPar8ActionPerformed
+
+    private void jRadioButtonPar7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonPar7ActionPerformed
+        jRadioButtonImpar8.setSelected(true);
+        jTextFieldConfiancaCombinacao.setText(String.format("%.2f", this.calcularConfianca()));
+    }//GEN-LAST:event_jRadioButtonPar7ActionPerformed
+
+    private void jRadioButtonPar6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonPar6ActionPerformed
+        jRadioButtonImpar9.setSelected(true);
+        jTextFieldConfiancaCombinacao.setText(String.format("%.2f", this.calcularConfianca()));
+    }//GEN-LAST:event_jRadioButtonPar6ActionPerformed
 
     private void jRadioButtonParesImparesNaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonParesImparesNaoActionPerformed
         jRadioButtonPar6.setEnabled(false);
@@ -1235,6 +1512,7 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         jRadioButtonImpar7.setEnabled(false);
         jRadioButtonImpar8.setEnabled(false);
         jRadioButtonImpar9.setEnabled(false);
+        jTextFieldConfiancaCombinacao.setText(String.format("%.2f", this.calcularConfianca()));
     }//GEN-LAST:event_jRadioButtonParesImparesNaoActionPerformed
 
     private void jRadioButtonParesImparesSimActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonParesImparesSimActionPerformed
@@ -1246,65 +1524,8 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         jRadioButtonImpar7.setEnabled(true);
         jRadioButtonImpar8.setEnabled(true);
         jRadioButtonImpar9.setEnabled(true);
+        jTextFieldConfiancaCombinacao.setText(String.format("%.2f", this.calcularConfianca()));
     }//GEN-LAST:event_jRadioButtonParesImparesSimActionPerformed
-
-    private void jRadioButtonSomaIntervalo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonSomaIntervalo1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButtonSomaIntervalo1ActionPerformed
-
-    private void jRadioButtonSomatoriaSimActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonSomatoriaSimActionPerformed
-        jRadioButtonSomaIntervalo1.setEnabled(true);
-        jRadioButtonSomaIntervalo2.setEnabled(true);
-        jRadioButtonSomaIntervalo3.setEnabled(true);
-        jRadioButtonSomaIntervalo4.setEnabled(true);
-    }//GEN-LAST:event_jRadioButtonSomatoriaSimActionPerformed
-
-    private void jRadioButtonSomatoriaNaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonSomatoriaNaoActionPerformed
-        jRadioButtonSomaIntervalo1.setEnabled(false);
-        jRadioButtonSomaIntervalo2.setEnabled(false);
-        jRadioButtonSomaIntervalo3.setEnabled(false);
-        jRadioButtonSomaIntervalo4.setEnabled(false);
-    }//GEN-LAST:event_jRadioButtonSomatoriaNaoActionPerformed
-
-    private void jRadioButtonPar6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonPar6ActionPerformed
-        jRadioButtonImpar9.setSelected(true);
-    }//GEN-LAST:event_jRadioButtonPar6ActionPerformed
-
-    private void jRadioButtonPar7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonPar7ActionPerformed
-        jRadioButtonImpar8.setSelected(true);
-    }//GEN-LAST:event_jRadioButtonPar7ActionPerformed
-
-    private void jRadioButtonPar8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonPar8ActionPerformed
-        jRadioButtonImpar7.setSelected(true);
-    }//GEN-LAST:event_jRadioButtonPar8ActionPerformed
-
-    private void jRadioButtonPar9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonPar9ActionPerformed
-        jRadioButtonImpar6.setSelected(true);
-    }//GEN-LAST:event_jRadioButtonPar9ActionPerformed
-
-    private void jRadioButtonImpar6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonImpar6ActionPerformed
-        jRadioButtonPar9.setSelected(true);
-    }//GEN-LAST:event_jRadioButtonImpar6ActionPerformed
-
-    private void jRadioButtonImpar7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonImpar7ActionPerformed
-        jRadioButtonPar8.setSelected(true);
-    }//GEN-LAST:event_jRadioButtonImpar7ActionPerformed
-
-    private void jRadioButtonImpar8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonImpar8ActionPerformed
-        jRadioButtonPar7.setSelected(true);
-    }//GEN-LAST:event_jRadioButtonImpar8ActionPerformed
-
-    private void jRadioButtonImpar9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonImpar9ActionPerformed
-        jRadioButtonPar6.setSelected(true);
-    }//GEN-LAST:event_jRadioButtonImpar9ActionPerformed
-
-    private void jRadioButtonQuantRepetidos9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonQuantRepetidos9ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButtonQuantRepetidos9ActionPerformed
-
-    private void jRadioButtonQuantRepetidos10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonQuantRepetidos10ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButtonQuantRepetidos10ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         jTextField01.setBackground(Color.white);
@@ -1361,6 +1582,7 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         } else {
             ultimoSorteio.setQuantRepetidos(ParesImpares.gerarNumero(7, 11));
         }
+
         int soma;
         int sorteioAnterior[] = new int[15];
         int combinacaos[] = new int[15];
@@ -1683,11 +1905,37 @@ public class JanelaPrincipal extends javax.swing.JFrame {
         String combinacao = new String();
 
         combinacaos = GerarCombinacaoDuasPreferencias.gerarCombinacao(parImpar.getQuantPares(), ultimoSorteio.getQuantRepetidos(), sorteioAnterior, excluir, priorizar);
+        if(jRadioButtonSomatoriaSim.isSelected()){
+            if (jRadioButtonSomaIntervalo1.isSelected()) {
+                combinacaos = Somatoria.aplicarPreferencia(combinacaos, 168, 183, priorizar, excluir, sorteioAnterior);
+                
+            } else if (jRadioButtonSomaIntervalo2.isSelected()) {
+                combinacaos = Somatoria.aplicarPreferencia(combinacaos, 184, 199, priorizar, excluir, sorteioAnterior);
+                
+            } else if (jRadioButtonSomaIntervalo3.isSelected()) {
+                combinacaos = Somatoria.aplicarPreferencia(combinacaos, 200, 214, priorizar, excluir, sorteioAnterior);
+                
+            } else if (jRadioButtonSomaIntervalo4.isSelected()) {
+                combinacaos = Somatoria.aplicarPreferencia(combinacaos, 216, 231, priorizar, excluir, sorteioAnterior);
+                
+            } else {
+                JOptionPane.showMessageDialog(null, "Erro ao tentar informar intervalo somatória!");
+            }
+        }else {
+            combinacaos = Somatoria.aplicarPreferencia(combinacaos, 120, 270, priorizar, excluir, sorteioAnterior);
+        }
+
         Utilitarios.ordenar(combinacaos);
         combinacao = Utilitarios.adicionarZero(combinacaos);
         jTextFieldComb1.setText(combinacao);
         soma = Somatoria.somatoria(combinacaos);
+
         jTextFieldSomatoria.setText(Integer.toString(soma));
+        jTextFieldQuantPar.setText(Integer.toString(ParesImpares.quantidadePares(combinacaos)));
+        jTextFieldQuantImpar.setText(Integer.toString(15-ParesImpares.quantidadePares(combinacaos)));
+        jTextFieldDistriLinhas.setText(Utilitarios.quantLinhas(combinacaos));
+        jTextFieldDistriColunas.setText(Utilitarios.quantColunas(combinacaos));
+        jTextFieldQuantRepetidos.setText("" + Utilitarios.verificarQuantidadeRepetidosDoisVetores(combinacaos, sorteioAnterior));
         for (int cont = 0; cont < 15; cont++) {
             if (combinacaos[cont] == 0) {
                 jTextField01.setBackground(Color.green);
@@ -1769,71 +2017,35 @@ public class JanelaPrincipal extends javax.swing.JFrame {
             }
 
         }
-
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jMenuItem1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItem1MouseClicked
-
-    }//GEN-LAST:event_jMenuItem1MouseClicked
-
-    private void jRadioButtonPriorizarDezenasSimActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonPriorizarDezenasSimActionPerformed
-        jRadioButtonPriorizarDezenasDesabilitar.setSelected(false);
-        jComboBoxPriorizarDezenas1.setEnabled(true);
-        jComboBoxPriorizarDezenas2.setEnabled(true);
-        jRadioButtonPriorizarDezenasDesabilitar.setEnabled(true);
-
-    }//GEN-LAST:event_jRadioButtonPriorizarDezenasSimActionPerformed
-
-    private void jRadioButtonPriorizarDezenasNaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonPriorizarDezenasNaoActionPerformed
-        jComboBoxPriorizarDezenas1.setEnabled(false);
-        jComboBoxPriorizarDezenas2.setEnabled(false);
-        jRadioButtonPriorizarDezenasDesabilitar.setEnabled(false);
-    }//GEN-LAST:event_jRadioButtonPriorizarDezenasNaoActionPerformed
-
-    private void jRadioButtonExcluirDezenasSimActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonExcluirDezenasSimActionPerformed
-        jRadioButtonExcluirDezenasDesabilitar.setSelected(false);
-        jComboBoxExcluirDezenas1.setEnabled(true);
-        jComboBoxExcluirDezenas2.setEnabled(true);
-        jRadioButtonExcluirDezenasDesabilitar.setEnabled(true);
-    }//GEN-LAST:event_jRadioButtonExcluirDezenasSimActionPerformed
-
-    private void jRadioButtonExcluirDezenasNaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonExcluirDezenasNaoActionPerformed
-        jComboBoxExcluirDezenas1.setEnabled(false);
-        jComboBoxExcluirDezenas2.setEnabled(false);
-        jRadioButtonExcluirDezenasDesabilitar.setEnabled(false);
-    }//GEN-LAST:event_jRadioButtonExcluirDezenasNaoActionPerformed
-
-    private void jComboBoxPriorizarDezenas1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxPriorizarDezenas1ActionPerformed
-
-    }//GEN-LAST:event_jComboBoxPriorizarDezenas1ActionPerformed
-
-    private void jComboBoxPriorizarDezenas2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxPriorizarDezenas2ActionPerformed
+    private void jTextFieldComb1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldComb1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBoxPriorizarDezenas2ActionPerformed
+    }//GEN-LAST:event_jTextFieldComb1ActionPerformed
 
-    private void jRadioButtonPriorizarDezenasDesabilitarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonPriorizarDezenasDesabilitarActionPerformed
-        if (jRadioButtonPriorizarDezenasDesabilitar.isSelected()) {
-            jComboBoxPriorizarDezenas2.setEnabled(false);
-        } else {
-            jComboBoxPriorizarDezenas2.setEnabled(true);
-        }
-    }//GEN-LAST:event_jRadioButtonPriorizarDezenasDesabilitarActionPerformed
-
-    private void jRadioButtonExcluirDezenasDesabilitarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonExcluirDezenasDesabilitarActionPerformed
-        if (jRadioButtonExcluirDezenasDesabilitar.isSelected()) {
-            jComboBoxExcluirDezenas2.setEnabled(false);
-        } else {
-            jComboBoxExcluirDezenas2.setEnabled(true);
-        }
-    }//GEN-LAST:event_jRadioButtonExcluirDezenasDesabilitarActionPerformed
-
-    private void jTextField14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField14ActionPerformed
+    private void jTextFieldQuantParActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldQuantParActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField14ActionPerformed
+    }//GEN-LAST:event_jTextFieldQuantParActionPerformed
 
-    private void jTextField17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField17ActionPerformed
+    private void jTextFieldQuantImparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldQuantImparActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField17ActionPerformed
+    }//GEN-LAST:event_jTextFieldQuantImparActionPerformed
+
+    private void jTextFieldDistriLinhasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldDistriLinhasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldDistriLinhasActionPerformed
+
+    private void jTextFieldDistriColunasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldDistriColunasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldDistriColunasActionPerformed
+
+    private void jTextFieldQuantRepetidosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldQuantRepetidosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldQuantRepetidosActionPerformed
+
+    private void jTextFieldSomatoriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldSomatoriaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldSomatoriaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1870,6 +2082,312 @@ public class JanelaPrincipal extends javax.swing.JFrame {
             }
         });
     }
+    
+    public double calcularConfianca(){
+        if ((jRadioButtonParesImparesSim.isSelected())&&(jRadioButtonRepetidosSim.isSelected())&&(jRadioButtonSomatoriaSim.isSelected())) {
+            if (jRadioButtonPar6.isSelected()) {
+               if (jRadioButtonQuantRepetidos8.isSelected()) {
+                    if (jRadioButtonSomaIntervalo1.isSelected()) {
+                        confiancaCombinacao = (seisPares+oitoRepetidos+somatoria168ate183)/3;
+                    } else if (jRadioButtonSomaIntervalo2.isSelected()) {
+                        confiancaCombinacao = (seisPares+oitoRepetidos+somatoria184ate199)/3;
+                    } else if (jRadioButtonSomaIntervalo3.isSelected()) {
+                        confiancaCombinacao = (seisPares+oitoRepetidos+somatoria200ate215)/3;                
+                    } else if (jRadioButtonSomaIntervalo4.isSelected()) {
+                        confiancaCombinacao = (seisPares+oitoRepetidos+somatoria216ate231)/3;
+                    } else {
+                    }
+                } else if (jRadioButtonQuantRepetidos9.isSelected()) {
+                    if (jRadioButtonSomaIntervalo1.isSelected()) {
+                        confiancaCombinacao = (seisPares+noveRepetidos+somatoria168ate183)/3;
+                    } else if (jRadioButtonSomaIntervalo2.isSelected()) {
+                        confiancaCombinacao = (seisPares+noveRepetidos+somatoria184ate199)/3;
+                    } else if (jRadioButtonSomaIntervalo3.isSelected()) {
+                        confiancaCombinacao = (seisPares+noveRepetidos+somatoria200ate215)/3;                
+                    } else if (jRadioButtonSomaIntervalo4.isSelected()) {
+                        confiancaCombinacao = (seisPares+noveRepetidos+somatoria216ate231)/3;
+                    } else {
+                    }
+                } else if (jRadioButtonQuantRepetidos10.isSelected()) {
+                    if (jRadioButtonSomaIntervalo1.isSelected()) {
+                        confiancaCombinacao = (seisPares+dezRepetidos+somatoria168ate183)/3;
+                    } else if (jRadioButtonSomaIntervalo2.isSelected()) {
+                        confiancaCombinacao = (seisPares+dezRepetidos+somatoria184ate199)/3;
+                    } else if (jRadioButtonSomaIntervalo3.isSelected()) {
+                        confiancaCombinacao = (seisPares+dezRepetidos+somatoria200ate215)/3;                
+                    } else if (jRadioButtonSomaIntervalo4.isSelected()) {
+                        confiancaCombinacao = (seisPares+dezRepetidos+somatoria216ate231)/3;
+                    } else {
+                    }
+                } else {
+                }
+            } else if (jRadioButtonPar7.isSelected()) {
+                if (jRadioButtonQuantRepetidos8.isSelected()) {
+                    if (jRadioButtonSomaIntervalo1.isSelected()) {
+                        confiancaCombinacao = (setePares+oitoRepetidos+somatoria168ate183)/3;
+                    } else if (jRadioButtonSomaIntervalo2.isSelected()) {
+                        confiancaCombinacao = (setePares+oitoRepetidos+somatoria184ate199)/3;
+                    } else if (jRadioButtonSomaIntervalo3.isSelected()) {
+                        confiancaCombinacao = (setePares+oitoRepetidos+somatoria200ate215)/3;                
+                    } else if (jRadioButtonSomaIntervalo4.isSelected()) {
+                        confiancaCombinacao = (setePares+oitoRepetidos+somatoria216ate231)/3;
+                    } else {
+                    }
+                } else if (jRadioButtonQuantRepetidos9.isSelected()) {
+                    if (jRadioButtonSomaIntervalo1.isSelected()) {
+                        confiancaCombinacao = (setePares+noveRepetidos+somatoria168ate183)/3;
+                    } else if (jRadioButtonSomaIntervalo2.isSelected()) {
+                        confiancaCombinacao = (setePares+noveRepetidos+somatoria184ate199)/3;
+                    } else if (jRadioButtonSomaIntervalo3.isSelected()) {
+                        confiancaCombinacao = (setePares+noveRepetidos+somatoria200ate215)/3;                
+                    } else if (jRadioButtonSomaIntervalo4.isSelected()) {
+                        confiancaCombinacao = (setePares+noveRepetidos+somatoria216ate231)/3;
+                    } else {
+                    }
+                } else if (jRadioButtonQuantRepetidos10.isSelected()) {
+                    if (jRadioButtonSomaIntervalo1.isSelected()) {
+                        confiancaCombinacao = (setePares+dezRepetidos+somatoria168ate183)/3;
+                    } else if (jRadioButtonSomaIntervalo2.isSelected()) {
+                        confiancaCombinacao = (setePares+dezRepetidos+somatoria184ate199)/3;
+                    } else if (jRadioButtonSomaIntervalo3.isSelected()) {
+                        confiancaCombinacao = (setePares+dezRepetidos+somatoria200ate215)/3;                
+                    } else if (jRadioButtonSomaIntervalo4.isSelected()) {
+                        confiancaCombinacao = (setePares+dezRepetidos+somatoria216ate231)/3;
+                    } else {
+                    }
+                } else {
+                }
+            } else if (jRadioButtonPar8.isSelected()) {
+               if (jRadioButtonQuantRepetidos8.isSelected()) {
+                    if (jRadioButtonSomaIntervalo1.isSelected()) {
+                        confiancaCombinacao = (oitoPares+oitoRepetidos+somatoria168ate183)/3;
+                    } else if (jRadioButtonSomaIntervalo2.isSelected()) {
+                        confiancaCombinacao = (oitoPares+oitoRepetidos+somatoria184ate199)/3;
+                    } else if (jRadioButtonSomaIntervalo3.isSelected()) {
+                        confiancaCombinacao = (oitoPares+oitoRepetidos+somatoria200ate215)/3;                
+                    } else if (jRadioButtonSomaIntervalo4.isSelected()) {
+                        confiancaCombinacao = (oitoPares+oitoRepetidos+somatoria216ate231)/3;
+                    } else {
+                    }
+                } else if (jRadioButtonQuantRepetidos9.isSelected()) {
+                    if (jRadioButtonSomaIntervalo1.isSelected()) {
+                        confiancaCombinacao = (oitoPares+noveRepetidos+somatoria168ate183)/3;
+                    } else if (jRadioButtonSomaIntervalo2.isSelected()) {
+                        confiancaCombinacao = (oitoPares+noveRepetidos+somatoria184ate199)/3;
+                    } else if (jRadioButtonSomaIntervalo3.isSelected()) {
+                        confiancaCombinacao = (oitoPares+noveRepetidos+somatoria200ate215)/3;                
+                    } else if (jRadioButtonSomaIntervalo4.isSelected()) {
+                        confiancaCombinacao = (oitoPares+noveRepetidos+somatoria216ate231)/3;
+                    } else {
+                    }
+                } else if (jRadioButtonQuantRepetidos10.isSelected()) {
+                    if (jRadioButtonSomaIntervalo1.isSelected()) {
+                        confiancaCombinacao = (oitoPares+dezRepetidos+somatoria168ate183)/3;
+                    } else if (jRadioButtonSomaIntervalo2.isSelected()) {
+                        confiancaCombinacao = (oitoPares+dezRepetidos+somatoria184ate199)/3;
+                    } else if (jRadioButtonSomaIntervalo3.isSelected()) {
+                        confiancaCombinacao = (oitoPares+dezRepetidos+somatoria200ate215)/3;                
+                    } else if (jRadioButtonSomaIntervalo4.isSelected()) {
+                        confiancaCombinacao = (oitoPares+dezRepetidos+somatoria216ate231)/3;
+                    } else {
+                    }
+                } else {
+                }
+            } else if (jRadioButtonPar9.isSelected()) {
+                if (jRadioButtonQuantRepetidos8.isSelected()) {
+                    if (jRadioButtonSomaIntervalo1.isSelected()) {
+                        confiancaCombinacao = (novePares+oitoRepetidos+somatoria168ate183)/3;
+                    } else if (jRadioButtonSomaIntervalo2.isSelected()) {
+                        confiancaCombinacao = (novePares+oitoRepetidos+somatoria184ate199)/3;
+                    } else if (jRadioButtonSomaIntervalo3.isSelected()) {
+                        confiancaCombinacao = (novePares+oitoRepetidos+somatoria200ate215)/3;                
+                    } else if (jRadioButtonSomaIntervalo4.isSelected()) {
+                        confiancaCombinacao = (novePares+oitoRepetidos+somatoria216ate231)/3;
+                    } else {
+                    }
+                } else if (jRadioButtonQuantRepetidos9.isSelected()) {
+                    if (jRadioButtonSomaIntervalo1.isSelected()) {
+                        confiancaCombinacao = (novePares+noveRepetidos+somatoria168ate183)/3;
+                    } else if (jRadioButtonSomaIntervalo2.isSelected()) {
+                        confiancaCombinacao = (novePares+noveRepetidos+somatoria184ate199)/3;
+                    } else if (jRadioButtonSomaIntervalo3.isSelected()) {
+                        confiancaCombinacao = (novePares+noveRepetidos+somatoria200ate215)/3;                
+                    } else if (jRadioButtonSomaIntervalo4.isSelected()) {
+                        confiancaCombinacao = (novePares+noveRepetidos+somatoria216ate231)/3;
+                    } else {
+                    }
+                } else if (jRadioButtonQuantRepetidos10.isSelected()) {
+                    if (jRadioButtonSomaIntervalo1.isSelected()) {
+                        confiancaCombinacao = (novePares+dezRepetidos+somatoria168ate183)/3;
+                    } else if (jRadioButtonSomaIntervalo2.isSelected()) {
+                        confiancaCombinacao = (novePares+dezRepetidos+somatoria184ate199)/3;
+                    } else if (jRadioButtonSomaIntervalo3.isSelected()) {
+                        confiancaCombinacao = (novePares+dezRepetidos+somatoria200ate215)/3;                
+                    } else if (jRadioButtonSomaIntervalo4.isSelected()) {
+                        confiancaCombinacao = (novePares+dezRepetidos+somatoria216ate231)/3;
+                    } else {
+                    }
+                } else {
+                }
+            } else {
+                
+            }
+        } else if ((!jRadioButtonParesImparesSim.isSelected())&&(jRadioButtonRepetidosSim.isSelected())&&(jRadioButtonSomatoriaSim.isSelected())) {
+                if (jRadioButtonQuantRepetidos8.isSelected()) {
+                    if (jRadioButtonSomaIntervalo1.isSelected()) {
+                        confiancaCombinacao = (oitoRepetidos+somatoria168ate183)/2;
+                    } else if (jRadioButtonSomaIntervalo2.isSelected()) {
+                        confiancaCombinacao = (oitoRepetidos+somatoria184ate199)/2;
+                    } else if (jRadioButtonSomaIntervalo3.isSelected()) {
+                        confiancaCombinacao = (oitoRepetidos+somatoria200ate215)/2;                
+                    } else if (jRadioButtonSomaIntervalo4.isSelected()) {
+                        confiancaCombinacao = (oitoRepetidos+somatoria216ate231)/2;
+                    } else {
+                    }
+                } else if (jRadioButtonQuantRepetidos9.isSelected()) {
+                    if (jRadioButtonSomaIntervalo1.isSelected()) {
+                        confiancaCombinacao = (noveRepetidos+somatoria168ate183)/2;
+                    } else if (jRadioButtonSomaIntervalo2.isSelected()) {
+                        confiancaCombinacao = (noveRepetidos+somatoria184ate199)/2;
+                    } else if (jRadioButtonSomaIntervalo3.isSelected()) {
+                        confiancaCombinacao = (noveRepetidos+somatoria200ate215)/2;                
+                    } else if (jRadioButtonSomaIntervalo4.isSelected()) {
+                        confiancaCombinacao = (noveRepetidos+somatoria216ate231)/2;
+                    } else {
+                    }
+                } else if (jRadioButtonQuantRepetidos10.isSelected()) {
+                    if (jRadioButtonSomaIntervalo1.isSelected()) {
+                        confiancaCombinacao = (dezRepetidos+somatoria168ate183)/2;
+                    } else if (jRadioButtonSomaIntervalo2.isSelected()) {
+                        confiancaCombinacao = (dezRepetidos+somatoria184ate199)/2;
+                    } else if (jRadioButtonSomaIntervalo3.isSelected()) {
+                        confiancaCombinacao = (dezRepetidos+somatoria200ate215)/2;                
+                    } else if (jRadioButtonSomaIntervalo4.isSelected()) {
+                        confiancaCombinacao = (dezRepetidos+somatoria216ate231)/2;
+                    } else {
+                    }
+                } else {
+                }
+        } else if ((jRadioButtonParesImparesSim.isSelected())&&(jRadioButtonRepetidosSim.isSelected())&&(!jRadioButtonSomatoriaSim.isSelected())) {
+            if (jRadioButtonPar6.isSelected()) {
+                if (jRadioButtonQuantRepetidos8.isSelected()) {
+                    confiancaCombinacao = (seisPares+oitoRepetidos)/2;
+                } else if (jRadioButtonQuantRepetidos9.isSelected()) {
+                    confiancaCombinacao = (seisPares+noveRepetidos)/2;
+                } else if (jRadioButtonQuantRepetidos10.isSelected()) {
+                    confiancaCombinacao = (seisPares+dezRepetidos)/2;
+                } else {
+                }
+            } else if (jRadioButtonPar7.isSelected()) {
+                if (jRadioButtonQuantRepetidos8.isSelected()) {
+                    confiancaCombinacao = (setePares+oitoRepetidos)/2;
+                } else if (jRadioButtonQuantRepetidos9.isSelected()) {
+                    confiancaCombinacao = (setePares+noveRepetidos)/2;
+                } else if (jRadioButtonQuantRepetidos10.isSelected()) {
+                    confiancaCombinacao = (setePares+dezRepetidos)/2;
+                } else {
+                }
+            } else if (jRadioButtonPar8.isSelected()) {
+                if (jRadioButtonQuantRepetidos8.isSelected()) {
+                    confiancaCombinacao = (oitoPares+oitoRepetidos)/2;
+                } else if (jRadioButtonQuantRepetidos9.isSelected()) {
+                    confiancaCombinacao = (oitoPares+noveRepetidos)/2;
+                } else if (jRadioButtonQuantRepetidos10.isSelected()) {
+                    confiancaCombinacao = (oitoPares+dezRepetidos)/2;
+                } else {
+                }
+            } else if (jRadioButtonPar9.isSelected()) {
+                if (jRadioButtonQuantRepetidos8.isSelected()) {
+                    confiancaCombinacao = (novePares+oitoRepetidos)/2;
+                } else if (jRadioButtonQuantRepetidos9.isSelected()) {
+                    confiancaCombinacao = (novePares+noveRepetidos)/2;
+                } else if (jRadioButtonQuantRepetidos10.isSelected()) {
+                    confiancaCombinacao = (novePares+dezRepetidos)/2;
+                } else {
+                }
+            }
+        } else if ((jRadioButtonParesImparesSim.isSelected())&&(!jRadioButtonRepetidosSim.isSelected())&&(jRadioButtonSomatoriaSim.isSelected())) {
+            if (jRadioButtonPar6.isSelected()) {
+                if (jRadioButtonSomaIntervalo1.isSelected()) {
+                    confiancaCombinacao = (seisPares+somatoria168ate183)/2;
+                } else if (jRadioButtonSomaIntervalo2.isSelected()) {
+                    confiancaCombinacao = (seisPares+somatoria184ate199)/2;
+                } else if (jRadioButtonSomaIntervalo3.isSelected()) {
+                    confiancaCombinacao = (seisPares+somatoria200ate215)/2;
+                } else if (jRadioButtonSomaIntervalo4.isSelected()) {
+                    confiancaCombinacao = (seisPares+somatoria216ate231)/2;
+                } else {
+                }
+            } else if (jRadioButtonPar7.isSelected()) {
+                if (jRadioButtonSomaIntervalo1.isSelected()) {
+                    confiancaCombinacao = (setePares+somatoria168ate183)/2;
+                } else if (jRadioButtonSomaIntervalo2.isSelected()) {
+                    confiancaCombinacao = (setePares+somatoria184ate199)/2;
+                } else if (jRadioButtonSomaIntervalo3.isSelected()) {
+                    confiancaCombinacao = (setePares+somatoria200ate215)/2;
+                } else if (jRadioButtonSomaIntervalo4.isSelected()) {
+                    confiancaCombinacao = (setePares+somatoria216ate231)/2;
+                } else {
+                }
+            } else if (jRadioButtonPar8.isSelected()) {
+                if (jRadioButtonSomaIntervalo1.isSelected()) {
+                    confiancaCombinacao = (oitoPares+somatoria168ate183)/2;
+                } else if (jRadioButtonSomaIntervalo2.isSelected()) {
+                    confiancaCombinacao = (oitoPares+somatoria184ate199)/2;
+                } else if (jRadioButtonSomaIntervalo3.isSelected()) {
+                    confiancaCombinacao = (oitoPares+somatoria200ate215)/2;
+                } else if (jRadioButtonSomaIntervalo4.isSelected()) {
+                    confiancaCombinacao = (oitoPares+somatoria216ate231)/2;
+                } else {
+                }
+            } else if (jRadioButtonPar9.isSelected()) {
+                if (jRadioButtonSomaIntervalo1.isSelected()) {
+                    confiancaCombinacao = (novePares+somatoria168ate183)/2;
+                } else if (jRadioButtonSomaIntervalo2.isSelected()) {
+                    confiancaCombinacao = (novePares+somatoria184ate199)/2;
+                } else if (jRadioButtonSomaIntervalo3.isSelected()) {
+                    confiancaCombinacao = (novePares+somatoria200ate215)/2;
+                } else if (jRadioButtonSomaIntervalo4.isSelected()) {
+                    confiancaCombinacao = (novePares+somatoria216ate231)/2;
+                } else {
+                }
+            }
+        } else if ((jRadioButtonParesImparesSim.isSelected())&&(!jRadioButtonRepetidosSim.isSelected())&&(!jRadioButtonSomatoriaSim.isSelected())) {
+            if (jRadioButtonPar6.isSelected()) {
+                confiancaCombinacao = seisPares;
+            } else if (jRadioButtonPar7.isSelected()) {
+                confiancaCombinacao = setePares;
+            } else if (jRadioButtonPar8.isSelected()) {
+                confiancaCombinacao = oitoPares;
+            } else if (jRadioButtonPar9.isSelected()) {
+                confiancaCombinacao = novePares;
+            }
+        } else if ((!jRadioButtonParesImparesSim.isSelected())&&(jRadioButtonRepetidosSim.isSelected())&&(!jRadioButtonSomatoriaSim.isSelected())) {
+            if (jRadioButtonQuantRepetidos8.isSelected()) {
+                confiancaCombinacao = oitoRepetidos;
+            } else if (jRadioButtonQuantRepetidos9.isSelected()) {
+                confiancaCombinacao = noveRepetidos;
+            } else if (jRadioButtonQuantRepetidos10.isSelected()) {
+                confiancaCombinacao = dezRepetidos;
+            } else {
+            }
+        } else if ((!jRadioButtonParesImparesSim.isSelected())&&(!jRadioButtonRepetidosSim.isSelected())&&(jRadioButtonSomatoriaSim.isSelected())) {
+            if (jRadioButtonSomaIntervalo1.isSelected()) {
+                  confiancaCombinacao = somatoria168ate183;              
+            } else if (jRadioButtonSomaIntervalo2.isSelected()) {
+                  confiancaCombinacao = somatoria184ate199;              
+            } else if (jRadioButtonSomaIntervalo3.isSelected()) {
+                  confiancaCombinacao = somatoria200ate215;            
+            } else if (jRadioButtonSomaIntervalo4.isSelected()) {
+                  confiancaCombinacao = somatoria216ate231;            
+            } else {
+            }
+        } else{
+             confiancaCombinacao = 0.0;
+        }    
+                
+        return this.confiancaCombinacao;
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroupExcluirDezenas;
@@ -1893,7 +2411,16 @@ public class JanelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -1912,6 +2439,9 @@ public class JanelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem10;
     private javax.swing.JMenuItem jMenuItem11;
+    private javax.swing.JMenuItem jMenuItem12;
+    private javax.swing.JMenuItem jMenuItem13;
+    private javax.swing.JMenuItem jMenuItem14;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
@@ -1953,12 +2483,6 @@ public class JanelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JRadioButton jRadioButtonSomaIntervalo4;
     private javax.swing.JRadioButton jRadioButtonSomatoriaNao;
     private javax.swing.JRadioButton jRadioButtonSomatoriaSim;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTable jTable2;
-    private javax.swing.JTable jTable3;
     private javax.swing.JTextField jTextField01;
     private javax.swing.JTextField jTextField02;
     private javax.swing.JTextField jTextField03;
@@ -1986,6 +2510,11 @@ public class JanelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField25;
     private javax.swing.JTextField jTextFieldComb1;
     private javax.swing.JTextField jTextFieldConfiancaCombinacao;
+    private javax.swing.JTextField jTextFieldDistriColunas;
+    private javax.swing.JTextField jTextFieldDistriLinhas;
+    private javax.swing.JTextField jTextFieldQuantImpar;
+    private javax.swing.JTextField jTextFieldQuantPar;
+    private javax.swing.JTextField jTextFieldQuantRepetidos;
     private javax.swing.JTextField jTextFieldSomatoria;
     // End of variables declaration//GEN-END:variables
 }
