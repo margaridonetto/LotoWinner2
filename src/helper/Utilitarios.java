@@ -76,19 +76,19 @@ public class Utilitarios {
      public static int[] carregarUltimoSorteio(int ultimoSorteio[]){ //BOM
         ultimoSorteio[0] = 1;
         ultimoSorteio[1] = 2;
-        ultimoSorteio[2] = 3;
-        ultimoSorteio[3] = 4;
-        ultimoSorteio[4] = 6;
+        ultimoSorteio[2] = 4;
+        ultimoSorteio[3] = 5;
+        ultimoSorteio[4] = 7;
         ultimoSorteio[5] = 8;
         ultimoSorteio[6] = 9;
-        ultimoSorteio[7] = 13;
-        ultimoSorteio[8] = 15;
-        ultimoSorteio[9] = 17;
-        ultimoSorteio[10] = 18;
-        ultimoSorteio[11] = 19;
-        ultimoSorteio[12] = 20;
-        ultimoSorteio[13] = 22;
-        ultimoSorteio[14] = 23;
+        ultimoSorteio[7] = 10;
+        ultimoSorteio[8] = 12;
+        ultimoSorteio[9] = 14;
+        ultimoSorteio[10] = 15;
+        ultimoSorteio[11] = 17;
+        ultimoSorteio[12] = 18;
+        ultimoSorteio[13] = 21;
+        ultimoSorteio[14] = 22;
        
         return ultimoSorteio;
         

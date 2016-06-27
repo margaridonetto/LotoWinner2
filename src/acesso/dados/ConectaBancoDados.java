@@ -21,9 +21,7 @@ public class ConectaBancoDados {
         try {
             System.setProperty("jdbc.Drivers", driver);
             con = DriverManager.getConnection(caminho, usuario, senha);
-            JOptionPane.showMessageDialog(null, "Conectado ao banco de dados com sucesso!");
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Erro ao tentar conectar ao banco de dados!\nErro:" + ex.getMessage());
         }
     }
     
@@ -32,16 +30,13 @@ public class ConectaBancoDados {
             stm = con.createStatement(rs.TYPE_SCROLL_INSENSITIVE, rs.CONCUR_READ_ONLY);
             rs = stm.executeQuery(comandoSql);
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Erro em ConectaBancoDados/executaSql \n" + ex.getMessage());
         }
     }
         
     public void desconexao(){
         try {
             con.close();
-            JOptionPane.showMessageDialog(null, "Desconectado do banco de dados com sucesso!");
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Erro ao tentar desconectar do banco de dados!\n" + ex.getMessage());
         }
     }
     

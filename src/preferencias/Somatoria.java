@@ -31,68 +31,32 @@ public class Somatoria {
         for (int cont = 0; cont < 25; cont++) {
             todosNumeros.add(cont + 1);
         }
-        System.out.println("Tamanho da combinação " + combinacao.length);
         for (int cont = 0; cont < combinacao.length; cont++) {
-            System.out.println("Combinação[" + cont + "] = " + combinacao[cont]);
-        }
-        for (int cont = 0; cont < combinacao.length; cont++) {
-            System.out.println("combinacao " + combinacao[cont]);
             todosNumeros = ParesImpares.retirarNum(todosNumeros, combinacao[cont]);
-        }
-        for (int cont = 0; cont < todosNumeros.size(); cont++) {
-            System.out.println("TODOS NÚMEROS SEM A COMBINAÇÃO " + todosNumeros.get(cont));
         }
         for (int cont = 0; cont < excluir.length; cont++) {
             todosNumeros = ParesImpares.retirarNum(todosNumeros, excluir[cont]);
         }
         for (int cont = 0; cont < todosNumeros.size(); cont++) {
-            System.out.println("TODOS NÚMEROS APÓS EXCLUIR " + todosNumeros.get(cont));
-        }
-        for (int cont = 0; cont < todosNumeros.size(); cont++) {
             repetido = Utilitarios.verificarRepetido(todosNumeros.get(cont), sorteioAnterior);
             if (repetido) {
-                System.out.println("Repetido deu: " + repetido + "\nNumero:" + todosNumeros.get(cont));
                 if (todosNumeros.get(cont) % 2 == 0) {
-                    System.out.println("Par para: " + todosNumeros.get(cont));
                     paresRepetidos.add(todosNumeros.get(cont));
                 } else {
-                    System.out.println("Impar para: " + todosNumeros.get(cont));
                     imparesRepetidos.add(todosNumeros.get(cont));
                 }
             } else {
-                System.out.println("Repetido deu: " + repetido + "\nNumero:" + todosNumeros.get(cont));
                 if (todosNumeros.get(cont) % 2 == 0) {
-                    System.out.println("Par para: " + todosNumeros.get(cont));
                     paresNaoRepetidos.add(todosNumeros.get(cont));
                 } else {
-                    System.out.println("Impar para: " + todosNumeros.get(cont));
                     imparesNaoRepetidos.add(todosNumeros.get(cont));
                 }
             }
         }
-        for (int cont = 0; cont < paresRepetidos.size(); cont++) {
-            System.out.println("PARES REPETIDOS " + paresRepetidos.get(cont));
-        }
-        for (int cont = 0; cont < combinacao.length; cont++) {
-            System.out.print(" " + combinacao[cont]);
-        }
-        for (int cont = 0; cont < imparesRepetidos.size(); cont++) {
-            System.out.println("IMPARES REPETIDOS " + imparesRepetidos.get(cont));
-        }
-        for (int cont = 0; cont < paresNaoRepetidos.size(); cont++) {
-            System.out.println("PARES NAO REPETIDOS " + paresNaoRepetidos.get(cont));
-        }
-        for (int cont = 0; cont < imparesNaoRepetidos.size(); cont++) {
-            System.out.println("IMPARES NAO REPETIDOS " + imparesNaoRepetidos.get(cont));
-        }
-        System.out.println("SOMATORIA: " + soma);
-
         while (soma < min || soma > max) {
             if (soma < min) {
-                System.out.println("SOMA DEU MENOR QUE MINIMO, \nSoma: " + soma + "\nMínimo:" + min);
                 grupoParaMudar = ParesImpares.gerarNumero(1, 3);
                 if (grupoParaMudar == 1) {
-                    System.out.println("GRUPO PARA MUDAR FOI 1");
                     for (int cont = 0; cont < 5; cont++) {
 
                         if (combinacao[cont] != priorizar[0] && combinacao[cont] != priorizar[1]) {
@@ -104,10 +68,7 @@ public class Somatoria {
 
                                     if (paresRepetidos.size() > 0) {
                                         maiorNumero = Utilitarios.maiorNumero(paresRepetidos);
-                                        System.out.println("MaiorNúmero ParesRepetidos: " + maiorNumero);
                                         if (maiorNumero > combinacao[cont]) {
-
-                                            System.out.println("Foi Maior que: " + combinacao[cont]);
                                             paresRepetidos.add(combinacao[cont]);
                                             combinacao[cont] = maiorNumero;
                                             paresRepetidos = ParesImpares.retirarNum(paresRepetidos, maiorNumero);
@@ -117,9 +78,7 @@ public class Somatoria {
                                 } else if (imparesRepetidos.size() > 0) {
 
                                     maiorNumero = Utilitarios.maiorNumero(imparesRepetidos);
-                                    System.out.println("MaiorNúmero ImparesRepetidos: " + maiorNumero);
                                     if (maiorNumero > combinacao[cont]) {
-                                        System.out.println("Foi Maior que: " + combinacao[cont]);
                                         imparesRepetidos.add(combinacao[cont]);
                                         combinacao[cont] = maiorNumero;
                                         imparesRepetidos = ParesImpares.retirarNum(imparesRepetidos, maiorNumero);
@@ -129,10 +88,7 @@ public class Somatoria {
 
                                 if (paresNaoRepetidos.size() > 0) {
                                     maiorNumero = Utilitarios.maiorNumero(paresNaoRepetidos);
-                                    System.out.println("MaiorNúmero ParesNaoRepetidos: " + maiorNumero);
                                     if (maiorNumero > combinacao[cont]) {
-
-                                        System.out.println("Foi Maior que: " + combinacao[cont]);
                                         paresNaoRepetidos.add(combinacao[cont]);
                                         combinacao[cont] = maiorNumero;
                                         paresNaoRepetidos = ParesImpares.retirarNum(paresNaoRepetidos, maiorNumero);
@@ -142,9 +98,7 @@ public class Somatoria {
                             } else if (imparesNaoRepetidos.size() > 0) {
 
                                 maiorNumero = Utilitarios.maiorNumero(imparesNaoRepetidos);
-                                System.out.println("MaiorNúmero ImparesNaoRepetidos: " + maiorNumero);
                                 if (maiorNumero > combinacao[cont]) {
-                                    System.out.println("Foi Maior que: " + combinacao[cont]);
                                     imparesNaoRepetidos.add(combinacao[cont]);
                                     combinacao[cont] = maiorNumero;
                                     imparesNaoRepetidos = ParesImpares.retirarNum(imparesNaoRepetidos, maiorNumero);
@@ -153,47 +107,31 @@ public class Somatoria {
                         }
                     }
                 } else if (grupoParaMudar == 2) {
-                    System.out.println("GRUPO PARA MUDAR FOI 2");
                     for (int cont = 5; cont < 10; cont++) {
-
                         if (combinacao[cont] != priorizar[0] && combinacao[cont] != priorizar[1]) {
-
                             repetido = Utilitarios.verificarRepetido(combinacao[cont], sorteioAnterior);
                             if (repetido) {
-
                                 if (combinacao[cont] % 2 == 0) {
-
                                     if (paresRepetidos.size() > 0) {
                                         maiorNumero = Utilitarios.maiorNumero(paresRepetidos);
-                                        System.out.println("MaiorNúmero ParesRepetidos: " + maiorNumero);
                                         if (maiorNumero > combinacao[cont]) {
-
-                                            System.out.println("Foi Maior que: " + combinacao[cont]);
                                             paresRepetidos.add(combinacao[cont]);
                                             combinacao[cont] = maiorNumero;
                                             paresRepetidos = ParesImpares.retirarNum(paresRepetidos, maiorNumero);
                                         }
                                     }
-
                                 } else if (imparesRepetidos.size() > 0) {
-
                                     maiorNumero = Utilitarios.maiorNumero(imparesRepetidos);
-                                    System.out.println("MaiorNúmero ImparesRepetidos: " + maiorNumero);
                                     if (maiorNumero > combinacao[cont]) {
-                                        System.out.println("Foi Maior que: " + combinacao[cont]);
                                         imparesRepetidos.add(combinacao[cont]);
                                         combinacao[cont] = maiorNumero;
                                         imparesRepetidos = ParesImpares.retirarNum(imparesRepetidos, maiorNumero);
                                     }
                                 }
                             } else if (combinacao[cont] % 2 == 0) {
-
                                 if (paresNaoRepetidos.size() > 0) {
                                     maiorNumero = Utilitarios.maiorNumero(paresNaoRepetidos);
-                                    System.out.println("MaiorNúmero ParesNaoRepetidos: " + maiorNumero);
                                     if (maiorNumero > combinacao[cont]) {
-
-                                        System.out.println("Foi Maior que: " + combinacao[cont]);
                                         paresNaoRepetidos.add(combinacao[cont]);
                                         combinacao[cont] = maiorNumero;
                                         paresNaoRepetidos = ParesImpares.retirarNum(paresNaoRepetidos, maiorNumero);
@@ -203,9 +141,7 @@ public class Somatoria {
                             } else if (imparesNaoRepetidos.size() > 0) {
 
                                 maiorNumero = Utilitarios.maiorNumero(imparesNaoRepetidos);
-                                System.out.println("MaiorNúmero ImparesNaoRepetidos: " + maiorNumero);
                                 if (maiorNumero > combinacao[cont]) {
-                                    System.out.println("Foi Maior que: " + combinacao[cont]);
                                     imparesNaoRepetidos.add(combinacao[cont]);
                                     combinacao[cont] = maiorNumero;
                                     imparesNaoRepetidos = ParesImpares.retirarNum(imparesNaoRepetidos, maiorNumero);
@@ -214,23 +150,14 @@ public class Somatoria {
                         }
                     }
                 } else {
-                    System.out.println("GRUPO PARA MUDAR FOI 3");
-
                     for (int cont = 10; cont < 15; cont++) {
-
                         if (combinacao[cont] != priorizar[0] && combinacao[cont] != priorizar[1]) {
-
                             repetido = Utilitarios.verificarRepetido(combinacao[cont], sorteioAnterior);
                             if (repetido) {
-
                                 if (combinacao[cont] % 2 == 0) {
-
                                     if (paresRepetidos.size() > 0) {
                                         maiorNumero = Utilitarios.maiorNumero(paresRepetidos);
-                                        System.out.println("MaiorNúmero ParesRepetidos: " + maiorNumero);
                                         if (maiorNumero > combinacao[cont]) {
-
-                                            System.out.println("Foi Maior que: " + combinacao[cont]);
                                             paresRepetidos.add(combinacao[cont]);
                                             combinacao[cont] = maiorNumero;
                                             paresRepetidos = ParesImpares.retirarNum(paresRepetidos, maiorNumero);
@@ -240,9 +167,7 @@ public class Somatoria {
                                 } else if (imparesRepetidos.size() > 0) {
 
                                     maiorNumero = Utilitarios.maiorNumero(imparesRepetidos);
-                                    System.out.println("MaiorNúmero ImparesRepetidos: " + maiorNumero);
                                     if (maiorNumero > combinacao[cont]) {
-                                        System.out.println("Foi Maior que: " + combinacao[cont]);
                                         imparesRepetidos.add(combinacao[cont]);
                                         combinacao[cont] = maiorNumero;
                                         imparesRepetidos = ParesImpares.retirarNum(imparesRepetidos, maiorNumero);
@@ -252,10 +177,7 @@ public class Somatoria {
 
                                 if (paresNaoRepetidos.size() > 0) {
                                     maiorNumero = Utilitarios.maiorNumero(paresNaoRepetidos);
-                                    System.out.println("MaiorNúmero ParesNaoRepetidos: " + maiorNumero);
                                     if (maiorNumero > combinacao[cont]) {
-
-                                        System.out.println("Foi Maior que: " + combinacao[cont]);
                                         paresNaoRepetidos.add(combinacao[cont]);
                                         combinacao[cont] = maiorNumero;
                                         paresNaoRepetidos = ParesImpares.retirarNum(paresNaoRepetidos, maiorNumero);
@@ -265,9 +187,7 @@ public class Somatoria {
                             } else if (imparesNaoRepetidos.size() > 0) {
 
                                 maiorNumero = Utilitarios.maiorNumero(imparesNaoRepetidos);
-                                System.out.println("MaiorNúmero ImparesNaoRepetidos: " + maiorNumero);
                                 if (maiorNumero > combinacao[cont]) {
-                                    System.out.println("Foi Maior que: " + combinacao[cont]);
                                     imparesNaoRepetidos.add(combinacao[cont]);
                                     combinacao[cont] = maiorNumero;
                                     imparesNaoRepetidos = ParesImpares.retirarNum(imparesNaoRepetidos, maiorNumero);
